@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  background: url("../img/background.jpg") center/cover no-repeat fixed;
+  color: white;
+}
+
+#wrapper {
+  width: 90%;
+  margin: 0 auto;
+  background: rgba(0,0,0,0.6);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+#logo {
+  width: 80px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background: rgba(0,0,0,0.4);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  transition: 0.3s;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background: #415A77;
+}
+
+.active {
+  background: #1B263B;
+}
+
+h2 {
+  margin-top: 20px;
+  color: #E0E1DD;
+}
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+fieldset {
+  border: 1px solid #778DA9;
+  padding: 15px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.1);
+}
+
+legend {
+  padding: 5px 10px;
+  background: #415A77;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #415A77;
+}
+
+.botones {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  background: #1B263B;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  backg
