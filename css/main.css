@@ -1,3 +1,22 @@
+/* =======================
+   PALETA DE COLORES (requisito)
+   ======================= */
+:root {
+  --color1: #0D1B2A;
+  --color2: #1B263B;
+  --color3: #415A77;
+  --color4: #778DA9;
+  --color5: #E0E1DD;
+}
+
+/* ======================
+   @FONT-FACE (requisito)
+   ====================== */
+@font-face {
+  font-family: "GymFont";
+  src: url("../fonts/GymFont.woff2") format("woff2");
+}
+
 /* ======================
    ESTILOS GENERALES
    ====================== */
@@ -5,27 +24,24 @@ body {
   font-family: "GymFont", Arial, sans-serif;
   background: url("../img/background.jpg") no-repeat center center fixed;
   background-size: cover;
-  color: var(--color5); /* Texto claro sobre fondo oscuro */
+  color: var(--color1);
   line-height: 1.6;
 }
 
-/* Contenedor con fondo semitransparente para mejorar legibilidad */
+
 #wrapper {
   width: 90%;
   margin: 0 auto;
-  background: rgba(0, 0, 0, 0.5); /* fondo oscuro transparente */
-  padding: 20px;
-  border-radius: 10px;
 }
 
 /* ======================
    HEADER
    ====================== */
 #header {
-  background: rgba(0, 0, 0, 0.7); /* más elegante */
+  background: var(--color2);
   color: white;
   padding: 30px;
-  position: relative;
+  position: relative; /* necesario para absolute del logo */
   text-align: center;
 }
 
@@ -42,7 +58,7 @@ body {
 #main-nav ul {
   list-style: none;
   display: flex;
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--color1);
   padding: 10px;
   justify-content: center;
 }
@@ -52,15 +68,15 @@ body {
   text-decoration: none;
   padding: 10px 20px;
   display: block;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease; /* requisito: transición */
 }
 
 #main-nav li a:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--color4);
 }
 
 #main-nav a.active {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--color3);
 }
 
 /* ======================
@@ -70,63 +86,9 @@ body {
   margin-top: 20px;
 }
 
-#bienvenida h2 {
-  color: white;
-}
-
 .hero {
   width: 100%;
   border-radius: 10px;
   margin-top: 10px;
-  animation: aparecer 2s;
-}
-
-.intro span {
-  color: var(--color4);
-  font-weight: bold;
-}
-
-/* ======================
-   TABLA DE HORARIOS
-   ====================== */
-table {
-  width: 100%;
-  margin-top: 20px;
-  border-collapse: collapse;
-  background: rgba(255, 255, 255, 0.9);
-}
-
-th, td {
-  border: 1px solid var(--color3);
-  padding: 10px;
-  text-align: center;
-}
-
-thead {
-  background: var(--color3);
-  color: white;
-}
-
-tfoot {
-  background: var(--color4);
-  font-style: italic;
-}
-
-/* ======================
-   FOOTER
-   ====================== */
-#footer {
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 20px;
-  margin-top: 40px;
-  text-align: center;
-}
-
-#footer a {
-  color: var(--color4);
-}
-
-#footer a:hover {
-  color: white;
+  animation: aparecer 2s; /* requisito: animación*/
 }
