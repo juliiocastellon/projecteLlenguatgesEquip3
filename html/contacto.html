@@ -13,13 +13,13 @@
 
 <div id="wrapper">
 
-    <!-- HEADER --------------------------------------------------- -->
+    <!-- HEADER -->
     <header id="header">
         <img src="../img/logo.png" id="logo" alt="logo gimnasio">
         <h1>Contacto – FitLife Gym</h1>
     </header>
 
-    <!-- NAV ------------------------------------------------------- -->
+    <!-- NAV -->
     <nav id="main-nav">
         <ul>
             <li><a href="../index.html">Inicio</a></li>
@@ -31,68 +31,65 @@
         </ul>
     </nav>
 
-    <!-- MAIN ------------------------------------------------------ -->
+    <!-- MAIN -->
     <main id="main-content">
 
         <section id="intro">
             <h2>¿Necesitas ayuda?</h2>
-            <p>Rellena el siguiente formulario y nos pondremos en contacto contigo lo antes posible.</p>
+            <p>Rellena el formulario y nuestro equipo se pondrá en contacto contigo lo antes posible.</p>
         </section>
 
-        <!-- FORMULARIO -------------------------------------------- -->
-        <section id="formulario">
-            <h2>Formulario de Contacto</h2>
+        <!-- NUEVO LAYOUT EN DOS COLUMNAS -->
+        <section id="form-columns">
 
-            <form action="" method="post">
+            <!-- COLUMNA IZQUIERDA -->
+            <div class="columna">
+                <h3>Tus Datos</h3>
 
-                <fieldset>
-                    <legend>Tus datos</legend>
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required minlength="3">
 
-                    <label for="nombre">Nombre completo:</label>
-                    <input type="text" id="nombre" name="nombre" required minlength="3">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
 
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="email" required>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" placeholder="123456789">
 
-                    <label for="telefono">Teléfono:</label>
-                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" placeholder="123456789">
+                <label for="motivo">Motivo de contacto:</label>
+                <select id="motivo" name="motivo" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="informacion">Solicitar información</option>
+                    <option value="inscripcion">Inscripción a clases</option>
+                    <option value="queja">Queja o sugerencia</option>
+                </select>
+            </div>
 
-                </fieldset>
+            <!-- COLUMNA DERECHA -->
+            <div class="columna">
+                <h3>Tu Mensaje</h3>
 
-                <fieldset>
-                    <legend>Información del mensaje</legend>
+                <label for="mensaje">Cuéntanos tu consulta:</label>
+                <textarea id="mensaje" name="mensaje" rows="9" required></textarea>
 
-                    <label for="motivo">Motivo de contacto:</label>
-                    <select id="motivo" name="motivo" required>
-                        <option value="">Selecciona una opción</option>
-                        <option value="informacion">Solicitar información</option>
-                        <option value="inscripcion">Inscripción a clases</option>
-                        <option value="queja">Queja o sugerencia</option>
-                    </select>
+                <p>¿Eres miembro del gimnasio?</p>
+                <label><input type="radio" name="miembro" value="si" required> Sí</label>
+                <label><input type="radio" name="miembro" value="no"> No</label>
 
-                    <p>¿Eres miembro del gimnasio?</p>
-                    <label><input type="radio" name="miembro" value="si" required> Sí</label>
-                    <label><input type="radio" name="miembro" value="no"> No</label>
+                <label class="check">
+                    <input type="checkbox" id="politica" required>
+                    Acepto la política de privacidad
+                </label>
+            </div>
 
-                    <label for="mensaje">Tu mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
-
-                    <label>
-                        <input type="checkbox" id="politica" required>
-                        Acepto la política de privacidad
-                    </label>
-
-                </fieldset>
-
-                <div class="botones">
-                    <input type="submit" value="Enviar formulario">
-                    <input type="reset" value="Limpiar">
-                </div>
-
-            </form>
         </section>
 
-        <!-- MAPA ---------------------------------------------------- -->
+        <!-- BOTONES CENTRADOS -->
+        <div id="botones-centro">
+            <input type="submit" class="btn" value="Enviar formulario">
+            <input type="reset" class="btn reset" value="Limpiar">
+        </div>
+
+        <!-- MAPA -->
         <section id="mapa">
             <h2>Nuestra ubicación</h2>
             <img src="../img/mapa.jpg" alt="Ubicación del gimnasio">
@@ -100,7 +97,6 @@
 
     </main>
 
-    <!-- FOOTER ----------------------------------------------------- -->
     <footer id="footer">
         <p>© 2025 FitLife Gym</p>
         <p><a href="mailto:info@gym.com">info@gym.com</a></p>
