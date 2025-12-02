@@ -1,49 +1,207 @@
-#header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 15px 25px;
-    background-color: #7AA095; /* Verde suave */
-    color: white;
+/* ======================================================
+   complemento.css - Estilos adicionales para FitLife
+   ====================================================== */
+
+/* ==========================
+   FUENTES ADICIONALES
+   ========================== */
+@font-face {
+  font-family: "GymFontBold";
+  src: url("../fonts/GymFont-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-display: swap;
 }
 
-#header img {
-    height: 60px;
+@font-face {
+  font-family: "GymFontItalic";
+  src: url("../fonts/GymFont-Italic.woff2") format("woff2");
+  font-style: italic;
+  font-display: swap;
 }
 
-#header h1 {
-    font-size: 28px;
-    margin: 0;
-    font-weight: 700;
+/* ==========================
+   SECCIÓN BIENVENIDA
+   ========================== */
+#bienvenida {
+  background-image: url('../img/bienvenida-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+  padding: 30px;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* ====== NAV ====== */
-
-#menu {
-    display: flex;
-    gap: 20px;
-    background-color: #5D7A58; /* Verde más oscuro */
-    padding: 12px 25px;
+#bienvenida:hover {
+  transform: scale(1.02);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.35);
 }
 
-#menu a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 8px 15px;
-    border-radius: 6px;
-    transition: 0.3s ease;
-    font-size: 18px;
+#bienvenida h2 {
+  font-family: "GymFontBold", sans-serif;
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
 }
 
-/* Hover: cuando pasas el mouse */
-#menu a:hover {
-    background-color: #7AA095;  /* un verde medio */
-    color: #ffffff;
+#bienvenida p {
+  font-size: 1.2rem;
 }
 
-/* Enlace activo (Inicio) */
-#menu a.active {
-    background-color: #9FC1B8;  /* tono más claro */
-    color: #1a1a1a;
+.imagenes-bienvenida img {
+  width: 200px;
+  margin: 12px;
+  border-radius: 12px;
+  float: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagenes-bienvenida img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ==========================
+   POR QUÉ NOSOTROS
+   ========================== */
+#por-que-nosotros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 20px;
+}
+
+#por-que-nosotros p {
+  flex: 2 1 400px;
+}
+
+.img-nosotros {
+  flex: 1 1 250px;
+  border-radius: 12px;
+  float: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-nosotros:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ==========================
+   PLANES DE SUSCRIPCIÓN
+   ========================== */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  flex: 1 1 250px;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+  overflow: hidden;
+  text-align: center;
+  padding: 14px;
+  color: #082118;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.25);
+}
+
+.card h3 {
+  font-family: "GymFontBold", sans-serif;
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-family: "GymFontItalic", sans-serif;
+}
+
+/* ==========================
+   IMPORTANCIA DE HACER EJERCICIO
+   ========================== */
+#importancia-ejercicio {
+  background: linear-gradient(135deg, #C3E2DB, #B1D2CA);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  color: #1a1a1a;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#importancia-ejercicio:hover {
+  transform: scale(1.02);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.3);
+}
+
+#ejercicio img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  float: right;
+  margin-left: 18px;
+  transition: transform 0.3s ease;
+}
+
+#ejercicio img:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+
+/* ==========================
+   PSEUDOELEMENTOS
+   ========================== */
+h2::first-letter {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--c6);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.05);
+  pointer-events: none;
+}
+
+/* ==========================
+   RESPONSIVE
+   ========================== */
+@media (max-width: 900px) {
+  #por-que-nosotros {
+    flex-direction: column;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .imagenes-bienvenida img, .img-nosotros, #ejercicio img {
+    width: 45%;
+    margin-bottom: 12px;
+    float: none;
+  }
 }
