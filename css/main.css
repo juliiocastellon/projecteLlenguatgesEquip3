@@ -1,4 +1,6 @@
-/* main.css - estilos globales para index.html y coherencia con contacto.css */
+/* ======================================================
+   main.css - Estilos globales para index y páginas extra
+   ====================================================== */
 
 /* ============================
    PALETA DE COLORES VERDE
@@ -6,22 +8,20 @@
 :root {
   --c1: #C3E2DB;   /* fondo suave */
   --c2: #B1D2CA;
-  --c3: #9FC1B8;   /* bordes / accents */
+  --c3: #9FC1B8;   /* detalles / accents */
   --c4: #7AA095;   /* texto destacado */
   --c5: #5D7A58;   /* header/nav/footer */
-  --c6: #5A7651;   /* botones, hover */
+  --c6: #5A7651;   /* hover / botones */
   --white-trans: rgba(255,255,255,0.95);
   --panel-trans: rgba(255,255,255,0.08);
 }
 
 /* ============================
-   FUENTE
+   FUENTE PERSONALIZADA
    ============================ */
 @font-face {
   font-family: "GymFont";
   src: url("../fonts/GymFont.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
   font-display: swap;
 }
 
@@ -31,23 +31,21 @@
 body {
   font-family: "GymFont", Arial, sans-serif;
   background: linear-gradient(135deg, var(--c1), var(--c3));
-  color: #0b2a21; /* oscuro sobre fondo claro */
+  color: #0b2a21;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   animation: pageFade 0.9s ease;
 }
 
 @keyframes pageFade {
   from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 #wrapper {
   width: 90%;
   max-width: 1100px;
   margin: 28px auto;
-  background: rgba(0,0,0,0.0); /* contenido sobre gradiente */
   padding: 8px;
 }
 
@@ -60,20 +58,16 @@ body {
   padding: 22px;
   border-radius: 10px;
   position: relative;
-  overflow: hidden;
   box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
 
 #header h1 {
   font-size: 1.9rem;
   letter-spacing: 0.6px;
-  margin: 0;
   text-align: center;
-  color: var(--c1);
   position: relative;
 }
 
-/* decorativo con pseudo-elementos (requisito) */
 #header h1::after {
   content: "";
   display: block;
@@ -85,7 +79,7 @@ body {
   opacity: 0.95;
 }
 
-/* logo */
+/* Logo */
 #logo {
   width: 88px;
   position: absolute;
@@ -93,44 +87,40 @@ body {
   top: 14px;
   transition: transform 0.25s ease;
 }
+
 #logo:hover { transform: scale(1.05); }
 
 /* ============================
-   NAV
+   NAV (MENÚ)
    ============================ */
-#main-nav {
-  margin-top: 12px;
-}
-#main-nav ul {
+#menu {
   display: flex;
   justify-content: center;
-  gap: 8px;
-  list-style: none;
-  padding: 10px;
-  margin: 12px 0;
-  background: linear-gradient(90deg, rgba(0,0,0,0.05), rgba(255,255,255,0.02));
-  border-radius: 10px;
-  border: 2px solid rgba(0,0,0,0.03);
-}
-#main-nav li { list-style: none; }
-#main-nav a {
-  color: var(--c1);
-  padding: 10px 18px;
-  text-decoration: none;
+  gap: 25px;
+  padding: 15px 0;
+  background-color: var(--c2);
   border-radius: 8px;
-  transition: all 0.22s ease;
-  display: inline-block;
-  font-weight: 600;
+  margin-top: 12px;
 }
-#main-nav a:hover {
-  background: var(--c6);
-  color: white;
-  transform: translateY(-3px);
+
+#menu a {
+  text-decoration: none;
+  color: #2b2b2b;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 8px 14px;
+  border-radius: 5px;
+  transition: 0.3s ease;
 }
-#main-nav a.active {
-  background: var(--c4);
+
+#menu a:hover {
+  background-color: #2ECC71; /* Verde vibrante */
   color: white;
-  box-shadow: 0 6px 14px rgba(90,118,81,0.12);
+}
+
+#menu a.activo {
+  background-color: var(--c4);
+  color: white;
 }
 
 /* ============================
@@ -138,19 +128,22 @@ body {
    ============================ */
 #bienvenida {
   margin-top: 10px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  background: var(--panel-trans);
   padding: 18px;
   border-radius: 10px;
   border: 2px solid rgba(0,0,0,0.04);
   text-align: center;
 }
+
 #bienvenida h2 {
   color: var(--c5);
   margin-bottom: 8px;
 }
+
 #bienvenida p.intro {
   color: rgba(11,42,33,0.9);
 }
+
 .hero {
   width: 100%;
   margin-top: 12px;
@@ -167,30 +160,33 @@ table {
   width: 100%;
   margin-top: 20px;
   border-collapse: collapse;
-  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.92));
+  background: var(--white-trans);
   border-radius: 8px;
   overflow: hidden;
 }
+
 thead {
   background: linear-gradient(90deg, var(--c5), var(--c4));
   color: var(--c1);
 }
+
 th, td {
   padding: 12px 10px;
   text-align: center;
   border-bottom: 1px solid rgba(0,0,0,0.06);
   color: #082118;
 }
+
 tbody tr:nth-child(odd) {
   background: rgba(0,0,0,0.02);
 }
+
 tbody tr:hover {
-  background: rgba(0,0,0,0.04);
-  transform: translateX(0);
+  background: rgba(46,204,113,0.15); /* Hover consistente con menú */
 }
 
-/* selectors avanzados ejemplo */
-tbody tr[data-type="festivo"] > td {
+/* Filas festivas */
+tbody tr[data-type="festivo"] td {
   background: linear-gradient(90deg, #ffe9d6, #ffd6b8);
   color: #682f00;
 }
@@ -208,23 +204,41 @@ tbody tr[data-type="festivo"] > td {
 }
 
 /* ============================
-   UTILIDADES Y ACCESIBILIDAD
+   UTILIDADES / ACCESIBILIDAD
    ============================ */
-a { color: var(--c4); text-decoration: none; }
-a:hover { text-decoration: underline; color: var(--c6); }
-
-/* focus visible */
-:focus { outline: 3px solid rgba(122,160,149,0.22); outline-offset: 2px; }
-
-/* responsive básico */
-@media (max-width: 900px) {
-  #form-columns, #form-columns .columna { flex-direction: column; width: 100%; }
-  #form-columns { display: block; }
-  #logo { position: static; margin: 0 auto 10px; display: block; }
-  #main-nav ul { flex-wrap: wrap; gap: 6px; }
+a {
+  color: var(--c4);
+  text-decoration: none;
 }
 
-/* pequeños pseudo-elementos para cumplir requisitos */
+a:hover {
+  color: var(--c6);
+  text-decoration: underline;
+}
+
+:focus {
+  outline: 3px solid rgba(122,160,149,0.22);
+  outline-offset: 2px;
+}
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+@media (max-width: 900px) {
+
+  #logo {
+    position: static;
+    display: block;
+    margin: 0 auto 12px;
+  }
+
+  #menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Estrellita decorativa */
 h2::before {
   content: "★ ";
   color: var(--c6);
