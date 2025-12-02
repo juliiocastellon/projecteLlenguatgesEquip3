@@ -1,132 +1,232 @@
-/* ======================
-   ESTILOS GENERALES
-   ====================== */
+/* main.css - estilos globales para index.html y coherencia con contacto.css */
+
+/* ============================
+   PALETA DE COLORES VERDE
+   ============================ */
+:root {
+  --c1: #C3E2DB;   /* fondo suave */
+  --c2: #B1D2CA;
+  --c3: #9FC1B8;   /* bordes / accents */
+  --c4: #7AA095;   /* texto destacado */
+  --c5: #5D7A58;   /* header/nav/footer */
+  --c6: #5A7651;   /* botones, hover */
+  --white-trans: rgba(255,255,255,0.95);
+  --panel-trans: rgba(255,255,255,0.08);
+}
+
+/* ============================
+   FUENTE
+   ============================ */
+@font-face {
+  font-family: "GymFont";
+  src: url("../fonts/GymFont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================
+   ESTILO GENERAL
+   ============================ */
 body {
   font-family: "GymFont", Arial, sans-serif;
-  background: url("../img/background.jpg") no-repeat center center fixed;
-  background-size: cover;
-  color: var(--color5); /* Texto claro sobre fondo oscuro */
+  background: linear-gradient(135deg, var(--c1), var(--c3));
+  color: #0b2a21; /* oscuro sobre fondo claro */
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  animation: pageFade 0.9s ease;
 }
 
-/* Contenedor con fondo semitransparente para mejorar legibilidad */
+@keyframes pageFade {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 #wrapper {
   width: 90%;
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0.5); /* fondo oscuro transparente */
-  padding: 20px;
-  border-radius: 10px;
+  max-width: 1100px;
+  margin: 28px auto;
+  background: rgba(0,0,0,0.0); /* contenido sobre gradiente */
+  padding: 8px;
 }
 
-/* ======================
+/* ============================
    HEADER
-   ====================== */
+   ============================ */
 #header {
-  background: rgba(0, 0, 0, 0.7); /* más elegante */
-  color: white;
-  padding: 30px;
+  background: var(--c5);
+  color: var(--c1);
+  padding: 22px;
+  border-radius: 10px;
   position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+#header h1 {
+  font-size: 1.9rem;
+  letter-spacing: 0.6px;
+  margin: 0;
+  text-align: center;
+  color: var(--c1);
+  position: relative;
+}
+
+/* decorativo con pseudo-elementos (requisito) */
+#header h1::after {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 6px;
+  margin: 12px auto 0;
+  background: linear-gradient(90deg, var(--c6), var(--c4));
+  border-radius: 4px;
+  opacity: 0.95;
+}
+
+/* logo */
+#logo {
+  width: 88px;
+  position: absolute;
+  right: 18px;
+  top: 14px;
+  transition: transform 0.25s ease;
+}
+#logo:hover { transform: scale(1.05); }
+
+/* ============================
+   NAV
+   ============================ */
+#main-nav {
+  margin-top: 12px;
+}
+#main-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  list-style: none;
+  padding: 10px;
+  margin: 12px 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0.05), rgba(255,255,255,0.02));
+  border-radius: 10px;
+  border: 2px solid rgba(0,0,0,0.03);
+}
+#main-nav li { list-style: none; }
+#main-nav a {
+  color: var(--c1);
+  padding: 10px 18px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.22s ease;
+  display: inline-block;
+  font-weight: 600;
+}
+#main-nav a:hover {
+  background: var(--c6);
+  color: white;
+  transform: translateY(-3px);
+}
+#main-nav a.active {
+  background: var(--c4);
+  color: white;
+  box-shadow: 0 6px 14px rgba(90,118,81,0.12);
+}
+
+/* ============================
+   BIENVENIDA / HERO
+   ============================ */
+#bienvenida {
+  margin-top: 10px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  padding: 18px;
+  border-radius: 10px;
+  border: 2px solid rgba(0,0,0,0.04);
   text-align: center;
 }
-
-#logo {
-  width: 80px;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-}
-
-/* ======================
-   NAVBAR
-   ====================== */
-#main-nav ul {
-  list-style: none;
-  display: flex;
-  background: rgba(0, 0, 0, 0.8);
-  padding: 10px;
-  justify-content: center;
-}
-
-#main-nav li a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  display: block;
-  transition: background 0.3s ease;
-}
-
-#main-nav li a:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-#main-nav a.active {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-/* ======================
-   SECCIÓN BIENVENIDA
-   ====================== */
-#bienvenida {
-  margin-top: 20px;
-}
-
 #bienvenida h2 {
-  color: white;
+  color: var(--c5);
+  margin-bottom: 8px;
 }
-
+#bienvenida p.intro {
+  color: rgba(11,42,33,0.9);
+}
 .hero {
   width: 100%;
-  border-radius: 10px;
-  margin-top: 10px;
-  animation: aparecer 2s;
+  margin-top: 12px;
+  border-radius: 12px;
+  display: block;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  border: 6px solid rgba(255,255,255,0.35);
 }
 
-.intro span {
-  color: var(--color4);
-  font-weight: bold;
-}
-
-/* ======================
+/* ============================
    TABLA DE HORARIOS
-   ====================== */
+   ============================ */
 table {
   width: 100%;
   margin-top: 20px;
   border-collapse: collapse;
-  background: rgba(255, 255, 255, 0.9);
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.92));
+  border-radius: 8px;
+  overflow: hidden;
 }
-
-th, td {
-  border: 1px solid var(--color3);
-  padding: 10px;
-  text-align: center;
-}
-
 thead {
-  background: var(--color3);
-  color: white;
+  background: linear-gradient(90deg, var(--c5), var(--c4));
+  color: var(--c1);
+}
+th, td {
+  padding: 12px 10px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  color: #082118;
+}
+tbody tr:nth-child(odd) {
+  background: rgba(0,0,0,0.02);
+}
+tbody tr:hover {
+  background: rgba(0,0,0,0.04);
+  transform: translateX(0);
 }
 
-tfoot {
-  background: var(--color4);
-  font-style: italic;
+/* selectors avanzados ejemplo */
+tbody tr[data-type="festivo"] > td {
+  background: linear-gradient(90deg, #ffe9d6, #ffd6b8);
+  color: #682f00;
 }
 
-/* ======================
+/* ============================
    FOOTER
-   ====================== */
+   ============================ */
 #footer {
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 20px;
-  margin-top: 40px;
+  margin-top: 20px;
+  background: var(--c5);
+  color: var(--c1);
+  padding: 14px;
+  border-radius: 8px;
   text-align: center;
 }
 
-#footer a {
-  color: var(--color4);
+/* ============================
+   UTILIDADES Y ACCESIBILIDAD
+   ============================ */
+a { color: var(--c4); text-decoration: none; }
+a:hover { text-decoration: underline; color: var(--c6); }
+
+/* focus visible */
+:focus { outline: 3px solid rgba(122,160,149,0.22); outline-offset: 2px; }
+
+/* responsive básico */
+@media (max-width: 900px) {
+  #form-columns, #form-columns .columna { flex-direction: column; width: 100%; }
+  #form-columns { display: block; }
+  #logo { position: static; margin: 0 auto 10px; display: block; }
+  #main-nav ul { flex-wrap: wrap; gap: 6px; }
 }
 
-#footer a:hover {
-  color: white;
+/* pequeños pseudo-elementos para cumplir requisitos */
+h2::before {
+  content: "★ ";
+  color: var(--c6);
+  margin-right: 6px;
 }
