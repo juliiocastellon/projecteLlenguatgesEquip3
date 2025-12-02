@@ -1,5 +1,49 @@
-#cap{
+#header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 25px;
+    background-color: #7AA095; /* Verde suave */
+    color: white;
+}
 
-background-color: aquamarine;
-width: 100% ;
+#header img {
+    height: 60px;
+}
+
+#header h1 {
+    font-size: 28px;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* ====== NAV ====== */
+
+#menu {
+    display: flex;
+    gap: 20px;
+    background-color: #5D7A58; /* Verde más oscuro */
+    padding: 12px 25px;
+}
+
+#menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    font-size: 18px;
+}
+
+/* Hover: cuando pasas el mouse */
+#menu a:hover {
+    background-color: #7AA095;  /* un verde medio */
+    color: #ffffff;
+}
+
+/* Enlace activo (Inicio) */
+#menu a.active {
+    background-color: #9FC1B8;  /* tono más claro */
+    color: #1a1a1a;
 }
