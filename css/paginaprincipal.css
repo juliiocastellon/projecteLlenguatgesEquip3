@@ -146,18 +146,10 @@
   border-radius: 16px;
   text-align: center;
   box-shadow: 0 6px 22px rgba(0,0,0,0.15);
-  transition: 0.3s ease;
-  
-  
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0,255,144,0.5);
 }
-
-/* ANIMACIÓN DE CRECER +100PX */
-@keyframes crecer {
-  0%   { transform: scale(1); }
-  50%  { transform: scale(1.25); }  /* Esto hace que crezca aprox 100px */
-  100% { transform: scale(1); }
-}
-
+  
 /* PRECIO */
 .plan .precio {
   display: block;
@@ -168,6 +160,7 @@
 
 /* BOTÓN */
 .btn-comprar {
+  display: inline-block;
   padding: 12px 25px;
   font-size: 1rem;
   background: rgb(0, 255, 144);
@@ -181,9 +174,10 @@
 
 }
 
-.btn-comprar:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px rgba(0,255,144,0.5);
+@keyframes crecer {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.25); }  /* Esto hace que crezca aprox 100px */
+  100% { transform: scale(1); }
 }
 
 /* RESPONSIVE */
