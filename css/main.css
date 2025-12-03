@@ -123,67 +123,6 @@ body {
   color: white;
 }
 
-/* ============================
-   BIENVENIDA / HERO
-   ============================ */
-#bienvenida {
-  margin-top: 10px;
-  background: var(--panel-trans);
-  padding: 18px;
-  border-radius: 10px;
-  border: 2px solid rgba(0,0,0,0.04);
-  text-align: center;
-}
-
-#bienvenida h2 {
-  color: var(--c5);
-  margin-bottom: 8px;
-}
-
-#bienvenida p.intro {
-  color: rgba(11,42,33,0.9);
-}
-
-.hero {
-  width: 100%;
-  margin-top: 12px;
-  border-radius: 12px;
-  display: block;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
-  border: 6px solid rgba(255,255,255,0.35);
-}
-
-/* ============================
-   TABLA DE HORARIOS
-   ============================ */
-table {
-  width: 100%;
-  margin-top: 20px;
-  border-collapse: collapse;
-  background: var(--white-trans);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-thead {
-  background: linear-gradient(90deg, var(--c5), var(--c4));
-  color: var(--c1);
-}
-
-th, td {
-  padding: 12px 10px;
-  text-align: center;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-  color: #082118;
-}
-
-tbody tr:nth-child(odd) {
-  background: rgba(0,0,0,0.02);
-}
-
-tbody tr:hover {
-  background: rgba(46,204,113,0.15); /* Hover consistente con menú */
-}
 
 /* Filas festivas */
 tbody tr[data-type="festivo"] td {
@@ -238,9 +177,4 @@ a:hover {
   }
 }
 
-/* Estrellita decorativa */
-h2::before {
-  content: "★ ";
-  color: var(--c6);
-  margin-right: 6px;
-}
+
