@@ -218,3 +218,103 @@ h2::first-letter {
     width: 85%;
   }
 }
+/* ======================================================
+   SECCIÓN IMPORTANCIA DEL EJERCICIO
+   ====================================================== */
+
+#importancia-ejercicio {
+  padding: 60px 20px;
+  margin: 60px 0;
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  background: #10141F; /* Fondo estilo tus otras secciones */
+  box-shadow: 0 0 25px rgba(0,255,144,0.25);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+#importancia-ejercicio:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 35px rgba(0,255,144,0.35);
+}
+
+/* =============================
+   TEXTO CENTRADO EN EL MEDIO
+   ============================= */
+#importancia-ejercicio h2 {
+  font-family: "GymFontBold", sans-serif;
+  font-size: 2.4rem;
+  text-align: center;
+  color: var(--accent);
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(0,255,144,0.35);
+}
+
+#importancia-ejercicio p {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 1.15rem;
+  line-height: 1.65;
+  max-width: 700px;
+
+  /* Animación leve de aparición */
+  opacity: 0;
+  transform: translateY(15px);
+  animation: aparecerTexto .8s ease forwards;
+}
+
+@keyframes aparecerTexto {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =============================
+   IMÁGENES A LOS DOS LADOS
+   ============================= */
+
+.img-ejercicio,
+.img-ejercicio-2 {
+  width: 280px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.img-ejercicio:hover,
+.img-ejercicio-2:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 25px rgba(0,255,144,0.45);
+}
+
+/* Para que todo esté bien alineado */
+.contenedor-importancia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* =============================
+   RESPONSIVE
+   ============================= */
+@media (max-width: 900px) {
+
+  #importancia-ejercicio {
+    flex-direction: column;
+  }
+
+  .contenedor-importancia {
+    flex-direction: column;
+  }
+
+  .img-ejercicio,
+  .img-ejercicio-2 {
+    width: 70%;
+  }
+}
