@@ -3,41 +3,30 @@
    ====================================================== */
 
 /* ============================
-   PALETA DE COLORES VERDE
+   PALETA DE COLORES NEÓN OSCURO
    ============================ */
 :root {
-  --c1: #C3E2DB;   /* fondo suave */
-  --c2: #B1D2CA;
-  --c3: #9FC1B8;   /* detalles / accents */
-  --c4: #7AA095;   /* texto destacado */
-  --c5: #5D7A58;   /* header/nav/footer */
-  --c6: #5A7651;   /* hover / botones */
-  --white-trans: rgba(255,255,255,0.95);
-  --panel-trans: rgba(255,255,255,0.08);
+  --dark-1: #0A0F1F;      /* Fondo principal */
+  --dark-2: #1B2330;      /* Paneles, header, nav */
+  --accent: #00FF90;      /* Verde neón */
+  --accent-soft: #00CC73; /* Verde suave */
+  --text-light: #E8F1F2;  /* Texto claro */
+  --text-soft: #A7B7BE;   /* Subtítulos */
+  --shadow-neon: 0 0 12px #00FF90;
 }
 
 /* ============================
-   FUENTE PERSONALIZADA
-   ============================ */
-@font-face {
-  font-family: "GymFont";
-  src: url("../fonts/GymFont.woff2") format("woff2");
-  font-display: swap;
-}
-
-/* ============================
-   ESTILO GENERAL
+   ESTILO GENERAL DEL BODY
    ============================ */
 body {
-  font-family: "GymFont", Arial, sans-serif;
-  background: linear-gradient(135deg, var(--c1), var(--c3));
-  color: #0b2a21;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, var(--dark-1) 0%, #000 90%);
+  color: var(--text-light);
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  animation: pageFade 0.9s ease;
+  animation: fadeInPage 0.9s ease;
 }
 
-@keyframes pageFade {
+@keyframes fadeInPage {
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }
 }
@@ -53,128 +42,141 @@ body {
    HEADER
    ============================ */
 #header {
-  background: var(--c5);
-  color: var(--c1);
-  padding: 22px;
-  border-radius: 10px;
+  background: var(--dark-2);
+  padding: 28px;
+  border-radius: 12px;
   position: relative;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  text-align: center;
+  border-bottom: 3px solid var(--accent);
+  box-shadow: 0 0 18px rgba(0,255,144,0.2);
 }
 
 #header h1 {
-  font-size: 1.9rem;
-  letter-spacing: 0.6px;
-  text-align: center;
-  position: relative;
+  font-size: 2.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: var(--shadow-neon);
 }
 
 #header h1::after {
   content: "";
   display: block;
-  width: 140px;
+  width: 160px;
   height: 6px;
-  margin: 12px auto 0;
-  background: linear-gradient(90deg, var(--c6), var(--c4));
+  margin: 14px auto 0;
+  background: linear-gradient(90deg, var(--accent-soft), var(--accent));
   border-radius: 4px;
-  opacity: 0.95;
 }
 
-/* Logo */
 #logo {
-  width: 88px;
+  width: 90px;
   position: absolute;
-  right: 18px;
-  top: 14px;
-  transition: transform 0.25s ease;
+  right: 20px;
+  top: 20px;
+  transition: 0.25s ease;
 }
 
 #logo:hover { transform: scale(1.05); }
 
 /* ============================
-   NAV (MENÚ)
+   MENÚ DE NAVEGACIÓN
    ============================ */
-#menu {
+#main-nav ul {
+  list-style: none;
   display: flex;
   justify-content: center;
   gap: 25px;
-  padding: 15px 0;
-  background-color: var(--c2);
-  border-radius: 8px;
+  padding: 14px;
   margin-top: 12px;
+  background: var(--dark-2);
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,255,144,0.1);
 }
 
-#menu a {
+#main-nav a {
   text-decoration: none;
-  color: #2b2b2b;
+  color: var(--text-light);
   font-weight: bold;
-  font-size: 18px;
-  padding: 8px 14px;
-  border-radius: 5px;
-  transition: 0.3s ease;
+  padding: 10px 22px;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
-#menu a:hover {
-  background-color: #2ECC71; /* Verde vibrante */
-  color: white;
+#main-nav a:hover {
+  background: var(--accent);
+  color: #000;
+  box-shadow: var(--shadow-neon);
 }
 
-#menu a.activo {
-  background-color: var(--c4);
-  color: white;
+#main-nav .active {
+  background: var(--accent-soft);
+  color: black;
+  box-shadow: var(--shadow-neon);
 }
 
+/* ============================
+   TABLAS (SI SE USAN)
+   ============================ */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--accent-soft);
+  color: var(--text-light);
+}
 
-/* Filas festivas */
-tbody tr[data-type="festivo"] td {
-  background: linear-gradient(90deg, #ffe9d6, #ffd6b8);
-  color: #682f00;
+th {
+  background: var(--accent-soft);
+  color: black;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+tbody tr:hover {
+  background: rgba(0,255,144,0.1);
 }
 
 /* ============================
    FOOTER
    ============================ */
 #footer {
-  margin-top: 20px;
-  background: var(--c5);
-  color: var(--c1);
-  padding: 14px;
-  border-radius: 8px;
+  background: var(--dark-2);
+  padding: 16px;
+  margin-top: 30px;
+  border-radius: 10px;
   text-align: center;
+  color: var(--text-soft);
+  border-top: 2px solid var(--accent-soft);
+  box-shadow: 0 0 12px rgba(0,255,144,0.25);
 }
 
-/* ============================
-   UTILIDADES / ACCESIBILIDAD
-   ============================ */
-a {
-  color: var(--c4);
-  text-decoration: none;
+#footer a {
+  color: var(--accent);
 }
 
-a:hover {
-  color: var(--c6);
-  text-decoration: underline;
-}
-
-:focus {
-  outline: 3px solid rgba(122,160,149,0.22);
-  outline-offset: 2px;
+#footer a:hover {
+  color: var(--accent-soft);
+  text-shadow: var(--shadow-neon);
 }
 
 /* ============================
    RESPONSIVE
    ============================ */
 @media (max-width: 900px) {
-
   #logo {
     position: static;
-    display: block;
     margin: 0 auto 12px;
   }
 
-  #menu {
+  #main-nav ul {
     flex-wrap: wrap;
-    justify-content: center;
   }
 }
-
-
