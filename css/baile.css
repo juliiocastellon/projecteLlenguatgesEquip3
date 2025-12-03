@@ -4,6 +4,11 @@ html{
     background-size: 100%;
     background-attachment: fixed;
 }
+body {
+        background-color: #121212;
+        color: #f0f0f0;
+        font-family: 'Arial', sans-serif;
+    }
 #menus {
   display: flex;
   gap: 20px;
@@ -24,20 +29,72 @@ html{
 
 
 #menus a:hover {
-  background: #ff3131;     
-  transform: scale(1.05);  
+      background: #ff3131;     
+      transform: scale(1.05);  
 }
-#horarios {
-  text-align: center;
-  margin: 40px auto;
-  margin-left: 40px;
-  max-width: 700px;
-  background: rgba(0,0,0,0.6);
-  padding: 20px;
-  border-radius: 10px;
+
+
+
+.horario {
+  width: 80%;
 }
-.horarios h2 {
-  color: white;
-  margin-bottom: 20px;
-  font-size: 32px;
+.container {
+      max-width: 900px;
+        padding: 20px;
 }
+
+    h1 {
+        color: #ff4081;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    p.description {
+        text-align: center;
+        font-size: 1.1em;
+        margin-bottom: 30px;
+        line-height: 1.5;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 30px;
+    }
+
+    table, th, td {
+        border: 1px solid #333;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #1f1f1f;
+        color: #ff4081;
+    }
+
+    tr:nth-child(even) {
+        background-color: #1a1a1a;
+    }
+
+    .cta {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .cta a {
+        background-color: #ff4081;
+        color: #fff;
+        padding: 12px 25px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+
+    .cta a:hover {
+        background-color: #e73370;
+    }
