@@ -1,0 +1,55 @@
+#titol {
+    color: white;
+    margin-left: 25%;
+    font-size: 30px;
+    color: #00FF90;
+}
+
+#presentacion {
+    color: white;
+}
+
+
+
+#image1 {
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+
+}
+
+#explicacionboxeo {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 60%;
+    left: 17%;
+}
+
+main {
+    height: 1600px;
+}
+
+#video1 {
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    top: 70%;
+    left: 20%;
+}
+#servicio1{
+    position: absolute;
+    left: 45%;
+    top: 45%; 
+    font-size: 30px;
+   
+
+}
+#servicio2{
+    position: absolute;
+    top: 1000px;
+    left: 45%;
+    font-size: 30px;
+}
