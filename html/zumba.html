@@ -1,64 +1,278 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="../css/baile.css">
-     <link rel="stylesheet" href="../css/main.css">
-    <title>Document</title>
+  <!-- Metadatos básicos y SEO / accesibilidad -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Clases de Zumba en Gimnasio FitLife — horarios, instructores, galería e inscripciones.">
+  <meta name="keywords" content="zumba, fitness, ritmo, gimnasio, clases, FitLife">
+  <meta name="author" content="Gimnasio FitLife">
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+  <!-- CSS global (main.css) + estilos específicos de la página (baile.css) -->
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/baile.css">
+
+  <title>Zumba — FitLife</title>
 </head>
 <body>
-    <header>
-        <nav id="menus">
-        <a href="../index.html">Inicio</a>
-        <a href="./boxeo.html">Boxeo</a>
-        <a href="zumba.html">Zumba</a>
-        <a href="dietas.html">Dietas</a>
-        <a href="rutinas.html">Rutinas</a>
-        <a href="contacto.html">Contacto</a>
-    </nav>
+  <div id="wrapper"><!-- Contenedor externo global -->
+
+    <!-- HEADER -->
+    <header id="header" role="banner">
+      <img id="logo" src="../assets/img/logo-fitlife.png" alt="Logo FitLife">
+      <h1>Zumba en FitLife <span class="slogan">Ritmo, salud y diversión</span></h1>
+      <!-- badge promocional en posición absoluta -->
+      <div class="promo-badge" aria-hidden="true">Promo 2x1</div>
     </header>
-    <main>
-      <div class="horario">
-        <div class="container">
-    <h1>Zumba: ¡Baila y Quema Calorías!</h1>
-    <p class="description">
-        Únete a nuestras clases de Zumba, el ejercicio que combina música y movimientos de baile para mantenerte en forma y divertirte. Ideal para todos los niveles, mejora tu resistencia y coordinación mientras disfrutas cada sesión.
-    </p>
 
-    <table>
-        <tr>
-            <th>Día</th>
-            <th>Hora</th>
-            <th>Instructor</th>
-        </tr>
-        <tr>
-            <td>Lunes</td>
-            <td>18:00 – 19:00</td>
-            <td>Julio</td>
-        </tr>
-        <tr>
-            <td>Miércoles</td>
-            <td>19:00 – 20:00</td>
-            <td>Mateo</td>
-        </tr>
-        <tr>
-            <td>Viernes</td>
-            <td>17:00 – 18:00</td>
-            <td>Julio</td>
-        </tr>
-    </table>
+    <!-- NAV: barra principal con distinción hover y .active -->
+    <nav id="main-nav" role="navigation" aria-label="Menú principal">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="./boxeo.html">Boxeo</a></li>
+        <li><a class="active" href="zumba.html" aria-current="page">Zumba</a></li>
+        <li><a href="dietas.html">Dietas</a></li>
+        <li><a href="rutinas.html">Rutinas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
 
-    <p class="description">
-        Recomendaciones: Trae ropa cómoda, zapatillas deportivas y una botella de agua. No necesitas experiencia previa.
-    </p>
+    <!-- NAV secundario fijado en la parte superior (fixed) -->
+    <div id="top-mini-nav" class="fixed-nav" role="navigation" aria-hidden="false">
+      <a href="#descripcion">Descripción</a> |
+      <a href="#horarios">Horarios</a> |
+      <a href="#instructors">Instructores</a> |
+      <a href="#inscripcion">Inscripción</a>
+    </div>
 
-    <div class="cta">
-        <a href="./contacto.html">¡Reserva tu plaza ahora!</a>
-    </div>
-    </div>
-    </div>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main role="main" id="main-content">
+      <!-- Sección 1: Hero / Descripción -->
+      <section id="descripcion" class="panel" data-section="descripcion">
+        <h2>¿Qué es Zumba? <span class="meta">Cultura y ritmo</span></h2>
+        <p><strong>Zumba</strong> es una fusión de estilos latinos e internacionales para el entrenamiento aeróbico. <em>Con pasos sencillos</em>, mejora la resistencia y la coordinación. <cite>FitLife — Programa 2025</cite></p>
+        <p>Nuestra propuesta combina música, coreografías y salud. Fija objetivos y diviértete.</p>
+
+        <!-- Imagen de fondo distinta con background-image (también se muestra una imagen real) -->
+        <div class="hero-media" role="img" aria-label="clase de zumba">
+          <img src="../assets/img/zumba-hero.jpg" alt="Participantes haciendo Zumba" class="cover-img">
+        </div>
+
+        <!-- Vídeo con alternativas -->
+        <div class="multimedia">
+          <h3>Demostración de clase</h3>
+          <video controls width="640" preload="metadata">
+            <source src="../assets/video/zumba-demo.webm" type="video/webm">
+            <source src="../assets/video/zumba-demo.mp4" type="video/mp4">
+            Su navegador no soporta vídeo. Consulte el enlace externo: <a href="https://www.example.com/zumba-video" target="_blank" rel="noopener">Vídeo Zumba</a>.
+          </video>
+        </div>
+      </section>
+
+      <!-- Sección 2: Horarios (tabla con thead, tbody, tfoot, rowspan/colspan) -->
+      <section id="horarios" class="panel schedule" aria-labelledby="horarios-title">
+        <h2 id="horarios-title">Horarios y tipos</h2>
+        <p>Clases diarias: General, Intermedio e Intensivo. Duración 55 min.</p>
+
+        <table class="schedule-table" summary="Horarios semanales de Zumba">
+          <thead>
+            <tr>
+              <th>Día</th>
+              <th>Mañana</th>
+              <th>Tarde</th>
+              <th>Instructor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2">Lunes</td>
+              <td>09:00 - 10:00</td>
+              <td>19:00 - 20:00</td>
+              <td>María / Joel</td>
+            </tr>
+            <tr>
+              <td>10:30 - 11:30</td>
+              <td>20:30 - 21:30</td>
+              <td>Pedro</td>
+            </tr>
+
+            <tr>
+              <td>Martes</td>
+              <td colspan="2">17:00 - 19:00 (Maratón especial)</td>
+              <td>Ana</td>
+            </tr>
+
+            <tr>
+              <td>Miércoles</td>
+              <td>09:00 - 10:00</td>
+              <td>19:00 - 20:00</td>
+              <td>María</td>
+            </tr>
+
+            <tr>
+              <td>Viernes</td>
+              <td>08:00 - 09:00</td>
+              <td>18:00 - 19:00</td>
+              <td>Joel</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4">Puede reservar plaza 24 horas antes</td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <!-- Tabla 2: Precios y paquetes con rowspan/colspan -->
+        <table class="price-table" summary="Tarifas y paquetes">
+          <thead>
+            <tr>
+              <th>Paquete</th>
+              <th>Sesiones/mes</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mensual</td>
+              <td>8</td>
+              <td>40€</td>
+            </tr>
+            <tr>
+              <td rowspan="2">Pack Pareja</td>
+              <td>8</td>
+              <td>70€</td>
+            </tr>
+            <tr>
+              <td>Ilimitado</td>
+              <td>95€</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Descuentos para estudiantes y jubilados (consultar condiciones)</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <!-- Sección 3: Instructores (fotos, float, background-image en el contenedor) -->
+      <section id="instructors" class="panel" aria-labelledby="instructors-title">
+        <h2 id="instructors-title">Instructores</h2>
+        <p>Nuestros instructores cuentan con certificaciones y experiencia en coreografías latinoamericanas.</p>
+
+        <div class="instructor-list">
+          <article class="instructor" data-type="senior">
+            <img class="instructor-photo" src="../assets/img/instructor-maria.jpg" alt="María — Instructora principal">
+            <h3>María López</h3>
+            <p class="bio"><strong>Especialidad:</strong> Zumba fitness y coreografías latinas. <mark>Certificada AFAA</mark>.</p>
+          </article>
+
+          <article class="instructor">
+            <img class="instructor-photo" src="../assets/img/instructor-joel.jpg" alt="Joel — Instructor">
+            <h3>Joel Sanchis</h3>
+            <p class="bio">Experto en ritmos urbanos y coordinación grupal.</p>
+          </article>
+
+          <article class="instructor">
+            <img class="instructor-photo" src="../assets/img/instructor-pedro.jpg" alt="Pedro — Instructor">
+            <h3>Pedro Noble</h3>
+            <p class="bio">Trabaja la resistencia y la motricidad con enfoque terapéutico.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Sección 4: Galería multimedia (mínimo 5 imágenes + audio) -->
+      <section id="galeria" class="panel gallery" aria-labelledby="galeria-title">
+        <h2 id="galeria-title">Galería y música</h2>
+        <p>Imágenes de sesiones y pistas recomendadas para bailar.</p>
+
+        <div class="thumbs">
+          <figure class="thumb"><img src="../assets/img/zumba1.jpg" alt="Zumba 1"><figcaption>Clase por la mañana</figcaption></figure>
+          <figure class="thumb"><img src="../assets/img/zumba2.jpg" alt="Zumba 2"><figcaption>Coreografía en grupo</figcaption></figure>
+          <figure class="thumb"><img src="../assets/img/zumba3.jpg" alt="Zumba 3"><figcaption>Calentamiento</figcaption></figure>
+          <figure class="thumb"><img src="../assets/img/zumba4.jpg" alt="Zumba 4"><figcaption>Clases temáticas</figcaption></figure>
+          <figure class="thumb"><img src="../assets/img/zumba5.jpg" alt="Zumba 5"><figcaption>Fin de sesión</figcaption></figure>
+        </div>
+
+        <!-- Audio con alternativas -->
+        <div class="audio-box">
+          <audio controls preload="metadata">
+            <source src="../assets/audio/zumba-mix.ogg" type="audio/ogg">
+            <source src="../assets/audio/zumba-mix.mp3" type="audio/mpeg">
+            El audio no está disponible. Consulte el enlace externo: <a href="https://www.example.com/zumba-mix" target="_blank" rel="noopener">Mix Zumba</a>.
+          </audio>
+        </div>
+      </section>
+
+      <!-- Sección 5: Formulario de inscripción (Contacto) -->
+      <section id="inscripcion" class="panel contact" aria-labelledby="inscripcion-title">
+        <h2 id="inscripcion-title">Inscripción y contacto</h2>
+
+        <form id="form-inscripcion" action="../server/inscripcion.php" method="post" novalidate>
+          <fieldset>
+            <legend>Formulario de inscripción</legend>
+
+            <label for="nombre">Nombre y apellidos <span class="req">*</span></label>
+            <input id="nombre" name="nombre" type="text" required minlength="3" placeholder="Ej: Juan Pérez">
+
+            <label for="email">Correo electrónico <span class="req">*</span></label>
+            <input id="email" name="email" type="email" required placeholder="ejemplo@dominio.com">
+
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" name="telefono" type="tel" pattern="^[0-9+\s\-]{6,20}$" placeholder="+34 600 000 000">
+
+            <label for="paquete">Selecciona paquete</label>
+            <select id="paquete" name="paquete" required>
+              <option value="">-- Elige --</option>
+              <option value="mensual">Mensual</option>
+              <option value="pareja">Pack Pareja</option>
+              <option value="ilimitado">Ilimitado</option>
+            </select>
+
+            <label for="comentario">Comentario u objetivo</label>
+            <textarea id="comentario" name="comentario" rows="4" placeholder="Explica tus objetivos..."></textarea>
+
+            <div class="consent">
+              <input id="acepto" name="acepto" type="checkbox" required>
+              <label for="acepto">Acepto las condiciones y protección de datos. <em>(requerido)</em></label>
+            </div>
+
+            <button type="submit" class="btn primary">Enviar inscripción</button>
+          </fieldset>
+        </form>
+      </section>
     </main>
-    
+
+    <!-- PIE (segunda barra de navegación simple e información) -->
+    <footer id="footer" role="contentinfo">
+      <p>© 2025 Gimnasio FitLife</p>
+
+      <!-- barra de navegación simple en el pie -->
+      <nav id="footer-nav" aria-label="Pie de página">
+        <a href="../index.html">Inicio</a> |
+        <a href="zumba.html">Zumba</a> |
+        <a href="rutinas.html">Rutinas</a> |
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+      <address>
+        Correo: <a href="mailto:fitlife@gym.com">fitlife@gym.com</a> — Tel: <a href="tel:+34600000000">+34 600 000 000</a>
+      </address>
+    </footer>
+
+    <!-- Botón de contacto fijo (ejemplo de uso de fixed) -->
+    <a href="#inscripcion" class="contact-fixed" aria-label="Inscripción rápida">Inscríbete</a>
+
+  </div> <!-- #wrapper -->
+
+  <!-- Enlaces externos mínimos (4) -->
+  <section aria-hidden="true" class="external-links">
+    <a href="https://www.zumba.com" target="_blank" rel="noopener">Zumba.com</a>
+    <a href="https://www.who.int" target="_blank" rel="noopener">WHO</a>
+    <a href="https://www.udemy.com" target="_blank" rel="noopener">Udemy</a>
+    <a href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a>
+  </section>
 </body>
 </html>
