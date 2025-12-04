@@ -270,3 +270,171 @@ input:invalid {
   color: var(--accent-soft);
   text-shadow: var(--shadow-neon);
 }
+
+
+/* ============================
+   SECCIÓN DE INFORMACIÓN + ICONO NEÓN
+   ============================ */
+#info-contacto {
+  margin-top: 40px;
+  padding: 25px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 12px;
+  border: 1px solid rgba(0,255,144,0.25);
+  box-shadow: 0 0 12px rgba(0,255,144,0.1);
+  text-align: center;
+}
+
+#info-contacto h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--accent);
+  text-shadow: var(--shadow-neon);
+  letter-spacing: 1px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.info-box {
+  background: rgba(0,0,0,0.35);
+  border: 1px solid var(--accent-soft);
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.3s ease;
+  box-shadow: 0 0 8px rgba(0,255,144,0.12);
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 18px rgba(0,255,144,0.25);
+}
+
+.info-box h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.info-box p, .info-box a {
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+.icono-ubicacion {
+  margin-top: 30px;
+  font-size: 3rem;
+  color: var(--accent);
+  text-shadow: 0 0 20px var(--accent);
+  animation: ubicacionGlow 2s infinite alternate ease-in-out;
+}
+
+@keyframes ubicacionGlow {
+  from { opacity: 0.6; transform: scale(1); }
+  to   { opacity: 1; transform: scale(1.2); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ============================
+   ENLACES DE INTERÉS – ESTILO NEÓN AZUL
+   ============================ */
+
+#extras h4 {
+  margin-top: 20px;
+  color: var(--blue-neon);
+  text-shadow: 0 0 10px var(--blue-neon);
+  font-size: 1.3rem;
+}
+
+#extras ul {
+  margin-top: 10px;
+  list-style: none;
+  padding-left: 0;
+}
+
+#extras li {
+  margin-bottom: 8px;
+}
+
+#extras a {
+  color: var(--blue-neon);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.25s ease;
+}
+
+#extras a:hover {
+  color: var(--blue-neon-soft);
+  text-shadow: 0 0 12px var(--blue-neon);
+  margin-left: 6px;
+}
+
+/* Alineación perfecta de radio buttons y slider */
+.grupo-form {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Alinear checkbox con el resto de campos */
+.check-group {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+}
+
+/* ===========================================
+   VALIDACIÓN HTML5: campos válidos / erróneos
+   =========================================== */
+
+input:valid,
+textarea:valid,
+select:valid {
+  border: 2px solid #00eaff; /* azul neón */
+  box-shadow: 0 0 8px #00eaff88;
+}
+
+input:invalid,
+textarea:invalid,
+select:invalid {
+  border: 2px solid #ff3b3b; /* rojo error */
+  box-shadow: 0 0 8px #ff3b3b88;
+}
+
+/* Evita que todos salgan rojos al cargar la página */
+input:placeholder-shown,
+textarea:placeholder-shown {
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: none;
+}

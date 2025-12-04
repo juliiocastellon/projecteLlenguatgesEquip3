@@ -95,17 +95,26 @@
                 <label for="mensaje">Cuéntanos tu consulta:</label>
                 <textarea id="mensaje" name="mensaje" rows="9" required placeholder="Escribe tu mensaje..."></textarea>
 
+                <div class="grupo-form">
                 <p>¿Eres miembro del gimnasio?</p>
-                <label><input type="radio" name="miembro" value="si" required> Sí</label>
-                <label><input type="radio" name="miembro" value="no"> No</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="miembro" value="si" required> Sí</label>
+                        <label><input type="radio" name="miembro" value="no"> No</label>
+                    </div>
 
                 <label for="satisfaccion">Nivel de satisfacción (0–10):</label>
                 <input type="range" id="satisfaccion" name="satisfaccion" min="0" max="10">
+                </div>
 
-                <label class="check">
+
+                <div class="check-group">
+                    <label class="check">
                     <input type="checkbox" id="politica" required>
                     Acepto la política de privacidad
-                </label>
+                    </label>
+                </div>
+
+
 
                 <!-- ENLACES EXTERNOS -->
                 <div id="extras">
@@ -130,17 +139,56 @@
         </form>
 
         <!-- MAPA -->
-        <section id="mapa">
-            <h2>Nuestra ubicación</h2>
-            <img src="../img/mapa.jpg" alt="Ubicación del gimnasio">
-        </section>
+       <section id="info-contacto">
+    <h2>¿Dónde estamos?</h2>
+
+    <div class="info-grid">
+
+        <div class="info-box">
+            <h3>📍 Dirección</h3>
+            <p>Carrer de l'Esport, 45<br>46870 Ontinyent, València</p>
+        </div>
+
+        <div class="info-box">
+            <h3>☎ Teléfono</h3>
+            <p><a href="tel:+34678945678">+34 678 945 678</a></p>
+        </div>
+
+        <div class="info-box">
+            <h3>✉ Correo electrónico</h3>
+            <p><a href="mailto:fitlife@gym.com">fitlife@gym.com</a></p>
+        </div>
+
+        <div class="info-box">
+            <h3>⏰ Horario</h3>
+            <p>L - V: 8:00 - 22:00<br>Sábados: 9:00 - 20:00<br>Domingos: Cerrado</p>
+        </div>
+
+    </div>
+
+    <div class="icono-ubicacion">
+        ✦
+    </div>
+</section>
+
 
     </main>
 
     <footer id="footer">
-        <p>© 2025 FitLife Gym</p>
-        <p><a href="mailto:info@gym.com">info@gym.com</a></p>
-    </footer>
+    <p>© 2025 Gimnasio FitLife</p>
+
+    <div id="footer-nav">
+        <a href="../index.html">Inicio</a> |
+        <a href="boxeo.html">Boxeo</a> |
+        <a href="zumba.html">Zumba</a> |
+        <a href="dietas.html">Dietas</a> |
+        <a href="rutinas.html">Rutinas</a> |
+        <a href="contacto.html">Contacto</a>
+    </div>
+
+    <a href="mailto:fitlife@gym.com">Enviar correo al autor</a>
+</footer>
+
 
 </div>
 

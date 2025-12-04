@@ -216,3 +216,12 @@ tbody tr:hover {
     flex-wrap: wrap;
   }
 }
+
+:root {
+  --accent: #53ffa3;        /* verde neón */
+  --accent-soft: #9affd1;   /* verde suave */
+  --blue-neon: #6bc5ff;     /* azul neón NUEVO */
+  --blue-neon-soft: #9edcff; /* azul suave NUEVO */
+  --text-light: #e8fff7;
+  --shadow-neon: 0 0 12px rgba(83,255,163,0.8);
+}
