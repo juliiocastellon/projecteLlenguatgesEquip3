@@ -1,7 +1,7 @@
 
-/* ============================
+/* 
    VARIABLES NEÓN
-   ============================ */
+   */
 :root {
   --dark-1: #0A0F1F;
   --dark-2: #1B2330;
@@ -18,10 +18,9 @@
   --blue-neon: #3ad0ff;
   --blue-neon-soft: #7fe6ff;
 }
-
-/* ============================
+/*
    GLOBAL
-   ============================ */
+ */
 body {
   font-family: Arial, sans-serif;
   background: radial-gradient(circle at top, var(--dark-1), #000 90%);
@@ -41,9 +40,9 @@ body {
   padding: 20px;
 }
 
-/* ============================
+/* 
    HEADER
-   ============================ */
+  */
 #header {
   background: var(--dark-2);
   padding: 30px;
@@ -84,9 +83,9 @@ body {
   transform: scale(1.05);
 }
 
-/* ============================
+/* 
    NAV
-   ============================ */
+    */
 #main-nav ul {
   list-style: none;
   display: flex;
@@ -119,9 +118,9 @@ body {
   color: #000;
 }
 
-/* ============================
+/* 
    INTRO
-   ============================ */
+    */
 #intro {
   text-align: center;
   margin: 20px auto;
@@ -136,9 +135,9 @@ body {
   font-size: 2rem;
 }
 
-/* ============================
+/* 
    FORMULARIO
-   ============================ */
+    */
 #form-columns {
   display: flex;
   gap: 35px;
@@ -170,9 +169,9 @@ body {
   color: rgba(0,255,144,0.35);
 }
 
-/* ============================
+/* 
    INPUTS
-   ============================ */
+  */
 input, textarea, select {
   width: 100%;
   padding: 12px;
@@ -189,9 +188,9 @@ input:focus, textarea:focus, select:focus {
   background: rgba(0,0,0,0.4);
 }
 
-/* ============================
+/* 
    VALIDACIÓN HTML5
-   ============================ */
+    */
 input:valid,
 textarea:valid,
 select:valid {
@@ -212,9 +211,9 @@ textarea:placeholder-shown {
   box-shadow: none;
 }
 
-/* ============================
-   RADIO + CHECKBOX alineados
-   ============================ */
+/* 
+   RADIO y CHECKBOX alineados
+    */
 .grupo-form {
   margin-top: 15px;
   display: flex;
@@ -241,9 +240,9 @@ textarea:placeholder-shown {
   font-weight: bold;
 }
 
-/* ============================
+/* 
    BOTONES
-   ============================ */
+   */
 #botones-centro {
   text-align: center;
   margin: 30px 0;
@@ -275,9 +274,9 @@ textarea:placeholder-shown {
   background: #555;
 }
 
-/* ============================
+/* 
    INFO CONTACTO
-   ============================ */
+   */
 #info-contacto {
   margin-top: 40px;
   padding: 25px;
@@ -323,9 +322,9 @@ textarea:placeholder-shown {
   to   { opacity: 1; transform: scale(1.2); }
 }
 
-/* ============================
-   INSTAGRAM BOX (corregido)
-   ============================ */
+/* 
+   INSTAGRAM BOX */
+   
 .instagram-box {
   width: 330px;
   margin: 40px auto 0;
