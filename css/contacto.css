@@ -1,26 +1,29 @@
-/* ======================================================
-   contacto.css - Estilo completo NEÓN para Contacto
-   ====================================================== */
 
-/* ============================
-   PALETA NEÓN (usa la misma que main.css)
-   ============================ */
+/* 
+   VARIABLES NEÓN
+   */
 :root {
   --dark-1: #0A0F1F;
   --dark-2: #1B2330;
+
   --accent: #00FF90;
   --accent-soft: #00CC73;
+
   --text-light: #E8F1F2;
   --text-soft: #A7B7BE;
-  --shadow-neon: 0 0 12px #00FF90;
-}
 
-/* ============================
-   BODY GENERAL
-   ============================ */
+  --shadow-neon: 0 0 12px #00FF90;
+
+  /* Nuevos colores para enlaces */
+  --blue-neon: #3ad0ff;
+  --blue-neon-soft: #7fe6ff;
+}
+/*
+   GLOBAL
+ */
 body {
   font-family: Arial, sans-serif;
-  background: radial-gradient(circle at top, var(--dark-1) 0%, #000 90%);
+  background: radial-gradient(circle at top, var(--dark-1), #000 90%);
   color: var(--text-light);
   animation: fadeInPage 1s ease;
 }
@@ -30,17 +33,16 @@ body {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Wrapper (pantalla completa) */
 #wrapper {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0 !important;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
   padding: 20px;
 }
 
-/* ============================
-   HEADER NEÓN
-   ============================ */
+/* 
+   HEADER
+  */
 #header {
   background: var(--dark-2);
   padding: 30px;
@@ -51,17 +53,11 @@ body {
   position: relative;
 }
 
-/* Tracking-in expand */
+/* animación tracking */
 @keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% { opacity: 0.6; }
-  100% {
-    letter-spacing: normal;
-    opacity: 1;
-  }
+  0%   { letter-spacing: -0.5em; opacity: 0; }
+  40%  { opacity: 0.6; }
+  100% { letter-spacing: normal; opacity: 1; }
 }
 
 #header h1 {
@@ -72,10 +68,9 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: var(--shadow-neon);
-  animation: tracking-in-expand 1.2s cubic-bezier(0.215,0.610,0.355,1.000) both;
+  animation: tracking-in-expand 1.2s ease both;
 }
 
-/* Logo */
 #logo {
   width: 85px;
   position: absolute;
@@ -84,11 +79,13 @@ body {
   transition: 0.25s ease;
 }
 
-#logo:hover { transform: scale(1.05); }
+#logo:hover {
+  transform: scale(1.05);
+}
 
-/* ============================
-   MENÚ (Nav)
-   ============================ */
+/* 
+   NAV
+    */
 #main-nav ul {
   list-style: none;
   display: flex;
@@ -107,7 +104,7 @@ body {
   padding: 10px 22px;
   border-radius: 6px;
   font-weight: bold;
-  transition: 0.25s ease;
+  transition: 0.25s;
 }
 
 #main-nav a:hover {
@@ -118,12 +115,12 @@ body {
 
 #main-nav .active {
   background: var(--accent-soft);
-  color: black;
+  color: #000;
 }
 
-/* ============================
+/* 
    INTRO
-   ============================ */
+    */
 #intro {
   text-align: center;
   margin: 20px auto;
@@ -136,12 +133,11 @@ body {
 #intro h2::first-letter {
   color: var(--accent);
   font-size: 2rem;
-  text-shadow: var(--shadow-neon);
 }
 
-/* ============================
-   FORMULARIO EN DOS COLUMNAS
-   ============================ */
+/* 
+   FORMULARIO
+    */
 #form-columns {
   display: flex;
   gap: 35px;
@@ -165,19 +161,17 @@ body {
   box-shadow: 0 0 18px rgba(0,255,144,0.18);
 }
 
-/* Icono decorativo */
 .columna::after {
   content: "✦";
   position: absolute;
   right: 15px;
   top: 10px;
   color: rgba(0,255,144,0.35);
-  font-size: 1.4rem;
 }
 
-/* ============================
-   INPUTS / SELECT / TEXTAREA
-   ============================ */
+/* 
+   INPUTS
+  */
 input, textarea, select {
   width: 100%;
   padding: 12px;
@@ -191,21 +185,64 @@ input, textarea, select {
 
 input:focus, textarea:focus, select:focus {
   box-shadow: 0 0 12px var(--accent);
-  border-color: var(--accent);
   background: rgba(0,0,0,0.4);
 }
 
-/* Validaciones */
-input:valid {
-  border-color: var(--accent-soft);
-}
-input:invalid {
-  border-color: #cc4444;
+/* 
+   VALIDACIÓN HTML5
+    */
+input:valid,
+textarea:valid,
+select:valid {
+  border-color: var(--blue-neon);
+  box-shadow: 0 0 10px var(--blue-neon);
 }
 
-/* ============================
+input:invalid,
+textarea:invalid,
+select:invalid {
+  border-color: #ff3b3b;
+  box-shadow: 0 0 10px #ff3b3b88;
+}
+
+input:placeholder-shown,
+textarea:placeholder-shown {
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: none;
+}
+
+/* 
+   RADIO y CHECKBOX alineados
+    */
+.grupo-form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.check-group {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+}
+
+/* 
    BOTONES
-   ============================ */
+   */
 #botones-centro {
   text-align: center;
   margin: 30px 0;
@@ -220,13 +257,12 @@ input:invalid {
   cursor: pointer;
   color: #000;
   box-shadow: var(--shadow-neon);
-  transition: 0.25s ease;
+  transition: 0.25s;
 }
 
 .btn:hover {
   background: var(--accent-soft);
   transform: translateY(-3px);
-  box-shadow: 0 0 18px #00FF90;
 }
 
 .reset {
@@ -238,35 +274,99 @@ input:invalid {
   background: #555;
 }
 
-/* ============================
-   MAPA
-   ============================ */
-#mapa img {
-  width: 100%;
-  margin-top: 20px;
-  border-radius: 12px;
-  border: 2px solid var(--accent);
-  box-shadow: 0 0 18px rgba(0,255,144,0.25);
-}
-
-/* ============================
-   FOOTER
-   ============================ */
-#footer {
-  background: var(--dark-2);
-  border-top: 2px solid var(--accent-soft);
-  box-shadow: 0 0 14px rgba(0,255,144,0.2);
-  padding: 18px;
-  border-radius: 10px;
+/* 
+   INFO CONTACTO
+   */
+#info-contacto {
   margin-top: 40px;
+  padding: 25px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 12px;
+  border: 1px solid rgba(0,255,144,0.25);
   text-align: center;
 }
 
-#footer a {
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 25px;
+}
+
+.info-box {
+  background: rgba(0,0,0,0.35);
+  border: 1px solid var(--accent-soft);
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 18px rgba(0,255,144,0.25);
+}
+
+.info-box h3 {
   color: var(--accent);
 }
 
-#footer a:hover {
-  color: var(--accent-soft);
-  text-shadow: var(--shadow-neon);
+/* icono */
+.icono-ubicacion {
+  margin-top: 30px;
+  font-size: 3rem;
+  color: var(--accent);
+  animation: ubicacionGlow 2s infinite alternate;
+}
+
+@keyframes ubicacionGlow {
+  from { opacity: 0.6; transform: scale(1); }
+  to   { opacity: 1; transform: scale(1.2); }
+}
+
+/* 
+   INSTAGRAM BOX */
+   
+.instagram-box {
+  width: 330px;
+  margin: 40px auto 0;
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: rgba(0,0,0,0.35);
+  border: 1px solid var(--accent-soft);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,255,144,0.20);
+  transition: 0.35s;
+}
+
+.instagram-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 32px rgba(0,255,144,0.45);
+}
+
+.icon-instagram {
+  width: 120px;
+  cursor: pointer;
+  filter: drop-shadow(0 0 12px var(--accent));
+  transition: 0.35s;
+}
+
+.icon-instagram:hover {
+  transform: scale(1.22) rotate(3deg);
+  filter: drop-shadow(0 0 25px var(--accent-soft));
+}
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+@media (max-width: 800px) {
+  #form-columns {
+    flex-direction: column;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
 }

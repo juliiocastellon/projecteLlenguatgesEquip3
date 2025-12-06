@@ -1,176 +1,152 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="../css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Equipo 3">
     <meta name="description" content="Gimnasio FitLife – Entrenamientos, dietas y contacto">
     <meta name="keywords" content="gimnasio, boxeo, zumba, dietas, rutinas, fitness">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitLife – INICIO</title>
+    <title>FitLife – Boxeo</title>
 
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="../css/boxeo.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
-    <div id="wrapper"></div>
-
     <header id="header">
-        <img src="./img/logo.png" id="logo" alt="logo gimnasio">
+        <img src="../img/logo.png" id="logo" alt="logo gimnasio">
         <h1>Gimnasio FitLife</h1>
     </header>
-    </header>
-   <nav id="main-nav">
+
+    <nav id="main-nav">
         <ul>
             <li><a href="../index.html">Inicio</a></li>
-            <li><a href="Anuarbotseo.html">Boxeo</a></li>
+            <li><a class="active" href="Anuarbotseo.html">Boxeo</a></li>
             <li><a href="zumba.html">Zumba</a></li>
-            <li><a href="servicios.html">Nuestros Servicios</a></li>
-            <li><a class="active" href="contacto.html">Contacto</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
         </ul>
-    </nav>
-    <main id="contenido">
-        <!-- =========================
-         1. Sección principal BOXEO
-    ========================= -->
-    <section id="boxeo-portada" class="seccion-boxeo">
-        <h1 class="titulo-boxeo">🥊 Boxeo en <em>FitLife</em></h1>
-        <p class="intro-boxeo">
-            Bienvenido a la sección de <strong>Boxeo</strong>. Aquí podrás conocer nuestros entrenamientos,
-            niveles, beneficios y horarios. El boxeo es uno de los deportes más completos para mejorar tu
-            condición física, aumentar tu confianza y liberar estrés.
-        </p>
+    </nav>
 
-        <div class="img-portada-boxeo">
-            <img src="./img/boxeo-portada.jpg" alt="Boxeador entrenando en el gimnasio">
-        </div>
-    </section>
+    <main>
+        <!-- Sección portada -->
+        <section id="boxeo-portada">
+            <h1 class="titulo-boxeo">🥊 Boxeo en <em>FitLife</em></h1>
+            <p class="intro-boxeo">El boxeo es uno de los deportes más completos: mejora tu técnica, tu resistencia y tu mente.</p>
 
-    <!-- =========================
-         2. Beneficios del Boxeo
-    ========================= -->
-    <section id="beneficios-boxeo">
-        <h2>Beneficios del Boxeo</h2>
-        <p>
-            El boxeo combina fuerza, resistencia, agilidad y técnica. Es ideal para personas de todos los
-            niveles, desde principiantes hasta avanzados.
-        </p>
-
-        <div class="cards-beneficios">
-            <div class="card-boxeo">
-                <img src="./img/boxeo-beneficio1.jpg" alt="Mejora física">
-                <h3>Mejora Física Completa</h3>
-                <p>Trabajas piernas, brazos, abdomen y cardio al mismo tiempo.</p>
+            <div class="img-portada-boxeo">
+                <img src="../img/box4k.jpg" alt="Boxeador entrenando">
             </div>
+        </section>
 
-            <div class="card-boxeo">
-                <img src="./img/boxeo-beneficio2.jpg" alt="Reducción de estrés">
-                <h3>Reduce el Estrés</h3>
-                <p>Golpear el saco ayuda a liberar tensiones y mejorar el estado de ánimo.</p>
+        <!-- Beneficios -->
+        <section id="beneficios-boxeo">
+            <h2>Beneficios del Boxeo</h2>
+            <p>Ideal para principiantes y avanzados, un entrenamiento completo para cuerpo y mente.</p>
+
+            <div class="cards-beneficios">
+                <div class="card-boxeo">
+                    <img src="../img/fisico.png" alt="Mejora física">
+                    <h3>Mejora Física</h3>
+                    <p>Mejoras fuerza, resistencia y cardio al mismo tiempo.</p>
+                </div>
+
+                <div class="card-boxeo">
+                    <img src="../img/estres.png" alt="Estrés">
+                    <h3>Reduce el Estrés</h3>
+                    <p>Entrena duro, libera tensiones y mejora tu ánimo.</p>
+                </div>
+
+                <div class="card-boxeo">
+                    <img src="../img/pelecallejera.png" alt="Defensa personal">
+                    <h3>Defensa Personal</h3>
+                    <p>Técnicas útiles para situaciones reales.</p>
+                </div>
             </div>
+        </section>
 
-            <div class="card-boxeo">
-                <img src="./img/boxeo-beneficio3.jpg" alt="Defensa personal">
-                <h3>Defensa Personal</h3>
-                <p>Aprenderás técnicas útiles para protegerte en situaciones reales.</p>
+        <!-- Clases -->
+        <section id="tipos-clases">
+            <h2>Tipos de Clases de Boxeo</h2>
+
+            <div class="lista-clases">
+                <div class="clase">
+                    <img src="../img/nino-de-tiro-medio-practicando-boxeo.jpg" alt="Boxeo básico">
+                    <h3>Boxeo Básico</h3>
+                    <p>Guardia, desplazamientos y golpes fundamentales.</p>
+                </div>
+
+                <div class="clase">
+                    <img src="../img/vista-lateral-del-boxeador-masculino-con-entrenador-y-guantes.jpg" alt="Nivel intermedio">
+                    <h3>Intermedio</h3>
+                    <p>Técnica avanzada, combos y sparring controlado.</p>
+                </div>
+
+                <div class="clase">
+                    <img src="../img/AVANZADO.png" alt="Avanzado">
+                    <h3>Avanzado</h3>
+                    <p>Entreno intenso con preparación profesional.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- =========================
-         3. Tipos de Clases
-    ========================= -->
-    <section id="tipos-clases">
-        <h2>Tipos de Clases de Boxeo</h2>
+        <!-- Horarios -->
+        <section id="horarios-boxeo">
+            <h2>Horarios de Boxeo</h2>
 
-        <div class="lista-clases">
-            <div class="clase">
-                <img src="./img/boxeo-clase1.jpg" alt="Boxeo Básico">
-                <h3>Boxeo Básico</h3>
-                <p>Aprende las bases: guardia, desplazamientos y golpes fundamentales.</p>
+            <table class="tabla-horarios">
+                <tr>
+                    <th>Día</th>
+                    <th>Horario</th>
+                    <th>Nivel</th>
+                </tr>
+                <tr>
+                    <td>Lunes</td>
+                    <td>18:00 – 19:30</td>
+                    <td>Básico</td>
+                </tr>
+                <tr>
+                    <td>Miércoles</td>
+                    <td>19:00 – 20:30</td>
+                    <td>Intermedio</td>
+                </tr>
+                <tr>
+                    <td>Viernes</td>
+                    <td>17:30 – 19:00</td>
+                    <td>Avanzado</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Entrenador -->
+        <section id="entrenador-boxeo">
+            <h2>Entrenador Principal</h2>
+
+            <div class="entrenador-info">
+                <img src="../img/canelo.png" alt="Entrenador" class="entrenador-img">
+
+                <div class="texto-entrenador">
+                    <h3>Canelo Àlvarez</h3>
+                    <p><strong>Más de 20 años de experiencia</strong> en competición. Experto en técnica y preparación física profesional.</p>
+                </div>
             </div>
-
-            <div class="clase">
-                <img src="./img/boxeo-clase2.jpg" alt="Boxeo Intermedio">
-                <h3>Nivel Intermedio</h3>
-                <p>Mejora tu técnica con combos más avanzados y trabajo de sparring controlado.</p>
-            </div>
-
-            <div class="clase">
-                <img src="./img/boxeo-clase3.jpg" alt="Boxeo Avanzado">
-                <h3>Avanzado</h3>
-                <p>Entrenamientos intensos, técnica de competición y preparación física completa.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================
-         4. Horarios
-    ========================= -->
-    <section id="horarios-boxeo">
-        <h2>Horarios de Boxeo</h2>
-
-        <table class="tabla-horarios">
-            <tr>
-                <th>Día</th>
-                <th>Horario</th>
-                <th>Nivel</th>
-            </tr>
-            <tr>
-                <td>Lunes</td>
-                <td>18:00 – 19:30</td>
-                <td>Básico</td>
-            </tr>
-            <tr>
-                <td>Miércoles</td>
-                <td>19:00 – 20:30</td>
-                <td>Intermedio</td>
-            </tr>
-            <tr>
-                <td>Viernes</td>
-                <td>17:30 – 19:00</td>
-                <td>Avanzado</td>
-            </tr>
-        </table>
-    </section>
-
-    <!-- =========================
-         5. Entrenador principal
-    ========================= -->
-    <section id="entrenador-boxeo">
-        <h2>Entrenador Principal</h2>
-
-        <div class="entrenador-info">
-            <img src="./img/entrenador-boxeo.jpg" alt="Entrenador de boxeo" class="entrenador-img">
-
-            <div class="texto-entrenador">
-                <h3>Juan “El Martillo” García</h3>
-                <p>
-                    Boxeador profesional con más de <strong>12 años de experiencia</strong> en competición.
-                    Especialista en técnica, entrenamiento funcional y preparación física.
-                </p>
-                <p>Su lema: <em>“La disciplina vence al talento cuando el talento no trabaja duro.”</em></p>
-            </div>
-        </div>
-    </section>
-
-
+        </section>
     </main>
+
     <footer id="footer">
-    <p>© 2025 Gimnasio FitLife</p>
-
-    <div id="footer-nav">
-        <a href="../index.html">Inicio</a> |
-        <a href="boxeo.html">Boxeo</a> |
-        <a href="zumba.html">Zumba</a> |
-        <a href="dietas.html">Dietas</a> |
-        <a href="rutinas.html">Rutinas</a> |
-        <a href="contacto.html">Contacto</a>
-    </div>
-
-    <a href="mailto:fitlife@gym.com">Enviar correo al autor</a>
-</footer>
+        <p>© 2025 Gimnasio FitLife</p>
+        <div id="footer-nav">
+            <a href="../index.html">Inicio</a> |
+            <a href="Anuarbotseo.html">Boxeo</a> |
+            <a href="zumba.html">Zumba</a> |
+            <a href="dietas.html">Dietas</a> |
+            <a href="rutinas.html">Rutinas</a> |
+            <a href="contacto.html">Contacto</a>
+        </div>
+        <a href="mailto:fitlife@gym.com">Enviar correo al autor</a>
+    </footer>
 </body>
-
 </html>
+

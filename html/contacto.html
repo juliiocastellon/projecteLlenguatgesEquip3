@@ -11,8 +11,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/contacto.css">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/contacto.css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
 
     <!-- HEADER -->
     <header id="header">
-        <img src="../img/logo.png" id="logo" alt="logo gimnasio">
+        <img src="../img/logo.png" id="logo" alt="Logo del gimnasio">
         <h1>Contacto – FitLife Gym</h1>
     </header>
 
@@ -39,6 +39,7 @@
     <!-- MAIN -->
     <main id="main-content">
 
+        <!-- INTRO -->
         <section id="intro">
             <h2>¿Necesitas ayuda?</h2>
             <p>Rellena el formulario y nuestro equipo se pondrá en contacto contigo lo antes posible.</p>
@@ -47,99 +48,150 @@
         <!-- FORMULARIO -->
         <form id="contact-form">
 
-        <section id="form-columns">
+            <section id="form-columns">
 
-            <!-- COLUMNA IZQUIERDA -->
-            <div class="columna">
-                <h3>Tus Datos</h3>
+                <!-- IZQUIERDA -->
+                <div class="columna">
+                    <h3>Tus Datos</h3>
 
-                <label for="nombre">Nombre completo:</label>
-                <input type="text" id="nombre" name="nombre" required minlength="3" placeholder="Ej: Marc Peiró" autofocus>
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required minlength="3" placeholder="Ej: Marc Peiró" autofocus>
 
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required placeholder="ejemplo@gmail.com">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required placeholder="ejemplo@gmail.com">
 
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{9}" placeholder="123456789">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{9}" placeholder="123456789">
 
-                <label for="edad">Edad:</label>
-                <input type="number" id="edad" name="edad" min="12" max="90" placeholder="21">
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" min="12" max="90" placeholder="21">
 
-                <label for="fecha">Fecha preferida de contacto:</label>
-                <input type="date" id="fecha" name="fecha">
+                    <label for="fecha">Fecha preferida de contacto:</label>
+                    <input type="date" id="fecha" name="fecha">
 
-                <label for="motivo">Motivo de contacto:</label>
-                <select id="motivo" name="motivo" required>
-                    <option value="">Selecciona una opción</option>
-                    <option value="informacion">Solicitar información</option>
-                    <option value="inscripcion">Inscripción a clases</option>
-                    <option value="queja">Queja o sugerencia</option>
-                </select>
+                    <label for="motivo">Motivo de contacto:</label>
+                    <select id="motivo" name="motivo" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="informacion">Solicitar información</option>
+                        <option value="inscripcion">Inscripción a clases</option>
+                        <option value="queja">Queja o sugerencia</option>
+                    </select>
 
-                <!-- DATALIST -->
-                <label for="conociste">¿Cómo nos conociste?</label>
-                <input list="origen" id="conociste" name="conociste" placeholder="Redes sociales">
+                    <!-- DATALIST -->
+                    <label for="conociste">¿Cómo nos conociste?</label>
+                    <input list="origen" id="conociste" name="conociste" placeholder="Redes sociales">
 
-                <datalist id="origen">
-                    <option value="Instagram">
-                    <option value="TikTok">
-                    <option value="Google">
-                    <option value="Recomendación de un amigo">
-                </datalist>
-            </div>
-
-            <!-- COLUMNA DERECHA -->
-            <div class="columna">
-                <h3>Tu Mensaje</h3>
-
-                <label for="mensaje">Cuéntanos tu consulta:</label>
-                <textarea id="mensaje" name="mensaje" rows="9" required placeholder="Escribe tu mensaje..."></textarea>
-
-                <p>¿Eres miembro del gimnasio?</p>
-                <label><input type="radio" name="miembro" value="si" required> Sí</label>
-                <label><input type="radio" name="miembro" value="no"> No</label>
-
-                <label for="satisfaccion">Nivel de satisfacción (0–10):</label>
-                <input type="range" id="satisfaccion" name="satisfaccion" min="0" max="10">
-
-                <label class="check">
-                    <input type="checkbox" id="politica" required>
-                    Acepto la política de privacidad
-                </label>
-
-                <!-- ENLACES EXTERNOS -->
-                <div id="extras">
-                    <h4>Enlaces de interés</h4>
-                    <ul>
-                        <li><a href="https://www.worldboxing.org" target="_blank">Federación Mundial de Boxeo</a></li>
-                        <li><a href="https://www.zumba.com" target="_blank">Web oficial Zumba</a></li>
-                        <li><a href="https://www.cdc.gov/physicalactivity/" target="_blank">Actividad física y salud</a></li>
-                        <li><a href="https://www.youtube.com/user/fitnessblender" target="_blank">Canal fitness recomendado</a></li>
-                    </ul>
+                    <datalist id="origen">
+                        <option value="Instagram">
+                        <option value="TikTok">
+                        <option value="Google">
+                        <option value="Recomendación de un amigo">
+                    </datalist>
                 </div>
+
+                <!-- DERECHA -->
+                <div class="columna">
+                    <h3>Tu Mensaje</h3>
+
+                    <label for="mensaje">Cuéntanos tu consulta:</label>
+                    <textarea id="mensaje" name="mensaje" rows="9" required placeholder="Escribe tu mensaje..."></textarea>
+
+                    <div class="grupo-form">
+                        <p>¿Eres miembro del gimnasio?</p>
+
+                        <div class="radio-group">
+                            <label><input type="radio" name="miembro" value="si" required> Sí</label>
+                            <label><input type="radio" name="miembro" value="no"> No</label>
+                        </div>
+
+                        <label for="satisfaccion">Nivel de satisfacción (0–10):</label>
+                        <input type="range" id="satisfaccion" name="satisfaccion" min="0" max="10">
+                    </div>
+
+                    <div class="check-group">
+                        <label class="check">
+                            <input type="checkbox" id="politica" required>
+                            Acepto la política de privacidad
+                        </label>
+                    </div>
+
+                    <!-- ENLACES EXTERNOS -->
+                    <div id="extras">
+                        <h4>Enlaces de interés</h4>
+                        <ul>
+                            <li><a href="https://www.worldboxing.org" target="_blank">Federación Mundial de Boxeo</a></li>
+                            <li><a href="https://www.zumba.com" target="_blank">Web oficial Zumba</a></li>
+                            <li><a href="https://www.cdc.gov/physicalactivity/" target="_blank">Actividad física y salud</a></li>
+                            <li><a href="https://www.youtube.com/user/fitnessblender" target="_blank">Canal fitness recomendado</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- BOTONES -->
+            <div id="botones-centro">
+                <input type="submit" class="btn" value="Enviar formulario">
+                <input type="reset" class="btn reset" value="Limpiar">
             </div>
-
-        </section>
-
-        <!-- BOTONES -->
-        <div id="botones-centro">
-            <input type="submit" class="btn" value="Enviar formulario">
-            <input type="reset" class="btn reset" value="Limpiar">
-        </div>
 
         </form>
 
-        <!-- MAPA -->
-        <section id="mapa">
-            <h2>Nuestra ubicación</h2>
-            <img src="../img/mapa.jpg" alt="Ubicación del gimnasio">
+        <!-- INFO CONTACTO / UBICACIÓN -->
+        <section id="info-contacto">
+            <h2>¿Dónde estamos?</h2>
+
+            <div class="info-grid">
+
+                <div class="info-box">
+                    <h3>📍 Dirección</h3>
+                    <p>Carrer de l'Esport, 45<br>46870 Ontinyent, València</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>☎ Teléfono</h3>
+                    <p><a href="tel:+34678945678">+34 678 945 678</a></p>
+                </div>
+
+                <div class="info-box">
+                    <h3>✉ Correo electrónico</h3>
+                    <p><a href="mailto:fitlife@gym.com">fitlife@gym.com</a></p>
+                </div>
+
+                <div class="info-box">
+                    <h3>⏰ Horario</h3>
+                    <p>L - V: 8:00 - 22:00<br>Sábados: 9:00 - 20:00<br>Domingos: Cerrado</p>
+                </div>
+
+            </div>
+
+            <div class="icono-ubicacion">✦</div>
+
+            <div class="info-box instagram-box">
+                <h3>📸 Instagram</h3>
+                <a href="https://www.instagram.com/fitlife_gym___" target="_blank">
+                    <img src="../img/instagram.png" alt="Instagram" class="icon-instagram">
+                </a>
+            </div>
+
         </section>
 
     </main>
 
+    <!-- FOOTER -->
     <footer id="footer">
-        <p>© 2025 FitLife Gym</p>
-        <p><a href="mailto:info@gym.com">info@gym.com</a></p>
+        <p>© 2025 Gimnasio FitLife</p>
+
+        <div id="footer-nav">
+            <a href="../index.html">Inicio</a> |
+            <a href="boxeo.html">Boxeo</a> |
+            <a href="zumba.html">Zumba</a> |
+            <a href="dietas.html">Dietas</a> |
+            <a href="rutinas.html">Rutinas</a> |
+            <a href="contacto.html">Contacto</a>
+        </div>
+
+        <a href="mailto:fitlife@gym.com">Enviar correo al autor</a>
     </footer>
 
 </div>

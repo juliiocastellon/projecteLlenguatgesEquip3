@@ -245,6 +245,29 @@ h2::first-letter {
 /* =============================
    TEXTO CENTRADO EN EL MEDIO
    ============================= */
+#importancia-ejercicio {
+  padding: 60px 20px;
+  margin: 60px 0;
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  background: #10141F; /* Fondo estilo tus otras secciones */
+  box-shadow: 0 0 25px rgba(0,255,144,0.25);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+#importancia-ejercicio:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 35px rgba(0,255,144,0.35);
+}
+
+/* =============================
+   TEXTO CENTRADO EN EL MEDIO
+   ============================= */
 #importancia-ejercicio h2 {
   font-family: "GymFontBold", sans-serif;
   font-size: 2.4rem;
