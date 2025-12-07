@@ -1,9 +1,20 @@
 #titol {
     color: white;
-    margin-left: 25%;
+    margin-left: 10%;
     font-size: 30px;
     color: #00FF90;
+    margin-top: 10%;
+    text-align: left;
 }
+#divtitol{
+    height: 60px;
+    width: 60%;
+    margin-left: 20%;
+    background-color: #1B2330 ;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px #00FF90;
+}
+
 
 #presentacion {
     color: white;
@@ -17,15 +28,23 @@
     position: absolute;
     top: 70%;
     left: 50%;
-
+    box-shadow: 0 0 15px #00FF90;
+    transition: transform 1s;
 }
+#image1:hover{
+    transform: scale(1.2);
+}
+
+
+
+
 
 #explicacionboxeo {
     color: white;
     font-size: 30px;
     position: absolute;
     top: 60%;
-    left: 17%;
+    left: 22%;
 }
 
 main {
@@ -41,15 +60,61 @@ main {
 }
 #servicio1{
     position: absolute;
-    left: 45%;
-    top: 45%; 
+    margin-left: 45px;
     font-size: 30px;
-   
-
+    color: #1B2330;
+}
+#divboxeo{
+    height: 50px;
+    width: 200px;
+    background-color: #00FF90;
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    border-radius: 15px;
+    
 }
 #servicio2{
     position: absolute;
-    top: 1000px;
-    left: 45%;
+    color: #1B2330;
+    left: 25%;
     font-size: 30px;
+    
+}
+#explicacionzumba{
+    position: absolute;
+    top: 1270px;
+    font-size: 30px;
+}
+#divzumba{
+    height: 50px;
+    width: 200px;
+    background-color: #00FF90;
+    position: absolute;
+    left: 46%;
+    top: 1150px;
+    border-radius: 15px;
+}
+#imagezumba{
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    top: 1350px;
+    transition: transform 1s;
+    box-shadow: 0 0 15px #00FF90;
+}
+#imagezumba:hover{
+    transform: scale(1.2);
+}
+#imagezumba2{
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    left: 950px;
+    top: 1350px;
+    transition: transform 1s;
+    box-shadow: 0 0 15px #00FF90;
+}
+#imagezumba2:hover{
+    transform: scale(1.2);
 }
