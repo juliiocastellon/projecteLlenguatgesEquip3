@@ -9,26 +9,19 @@
   <meta name="author" content="Gimnasio FitLife">
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
 
-
   <!-- CSS global (main.css) + estilos específicos de la página (baile.css) -->
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/baile.css">
 
-
   <title>Zumba — FitLife</title>
 </head>
 <body>
-  <div id="wrapper"><!-- Contenedor externo global -->
-
-
+    <div id="wrapper">
     <!-- HEADER -->
     <header id="header" role="banner">
       <img id="logo" src="../img/logo.png" alt="Logo FitLife">
       <h1>Zumba en FitLife </h1>
-      <!-- badge promocional en posición absoluta -->
-      <div class="promo-badge" aria-hidden="true">Promo 2x1</div>
     </header>
-
 
     <!-- NAV: barra principal con distinción hover y .active -->
     <nav id="main-nav" role="navigation" aria-label="Menú principal">
@@ -36,21 +29,17 @@
         <li><a href="../index.html">Inicio</a></li>
         <li><a href="./Anuarbotseo.html">Boxeo</a></li>
         <li><a class="active" href="zumba.html" aria-current="page">Zumba</a></li>
-        <li><a href="dietas.html">Dietas</a></li>
-        <li><a href="rutinas.html">Rutinas</a></li>
+        <li><a href="dietas.html">Nuestros Servicios</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
-
 
     <!-- NAV secundario fijado en la parte superior (fixed) -->
     <div id="top-mini-nav" class="fixed-nav" role="navigation" aria-hidden="false">
       <a href="#descripcion">Descripción</a> |
       <a href="#horarios">Horarios</a> |
-      <a href="#instructors">Instructores</a> |
-      <a href="#inscripcion">Inscripción</a>
+      <a href="#instructors">Instructores</a>
     </div>
-
 
     <!-- CONTENIDO PRINCIPAL -->
     <main role="main" id="main-content">
@@ -60,9 +49,6 @@
         <p><strong>Zumba</strong> es una fusión de estilos latinos e internacionales para el entrenamiento aeróbico. <em>Con pasos sencillos</em>, mejora la resistencia y la coordinación. <cite>FitLife — Programa 2025</cite></p>
         <p>Nuestra propuesta combina música, coreografías y salud. Fija objetivos y diviértete.</p>
 
-
-
-
         <!-- Vídeo -->
         <div class="multimedia">
           <h3>Demostración de clase</h3>
@@ -70,14 +56,13 @@
             <source src="../img/ejemplozumba.mp4" type="video/mp4">
           </video>
         </div>
+       
       </section>
-
 
       <!-- Sección 2: Horarios (tabla con thead, tbody, tfoot, rowspan/colspan) -->
       <section id="horarios" class="panel schedule" aria-labelledby="horarios-title">
         <h2 id="horarios-title">Horarios y tipos</h2>
         <p>Clases diarias: General, Intermedio e Intensivo. Duración 55 min.</p>
-
 
         <table class="schedule-table" summary="Horarios semanales de Zumba">
           <thead>
@@ -101,13 +86,11 @@
               <td>Pedro</td>
             </tr>
 
-
             <tr>
               <td>Martes</td>
               <td colspan="2">17:00 - 19:00 (Maratón especial)</td>
               <td>Ana</td>
             </tr>
-
 
             <tr>
               <td>Miércoles</td>
@@ -115,7 +98,6 @@
               <td>19:00 - 20:00</td>
               <td>María</td>
             </tr>
-
 
             <tr>
               <td>Viernes</td>
@@ -130,7 +112,6 @@
             </tr>
           </tfoot>
         </table>
-
 
         <!-- Tabla 2: Precios y paquetes con rowspan/colspan -->
         <table class="price-table" summary="Tarifas y paquetes">
@@ -165,12 +146,10 @@
         </table>
       </section>
 
-
       <!-- Sección 3: Instructores (fotos, float, background-image en el contenedor) -->
       <section id="instructors" class="panel" aria-labelledby="instructors-title">
         <h2 id="instructors-title">Instructores</h2>
         <p>Nuestros instructores cuentan con certificaciones y experiencia en coreografías latinoamericanas.</p>
-
 
         <div class="instructor-list">
           <article class="instructor" data-type="senior">
@@ -179,13 +158,11 @@
             <p class="bio"><strong>Especialidad:</strong> Zumba fitness y coreografías latinas. <mark>Certificada AFAA</mark>.</p>
           </article>
 
-
           <article class="instructor">
             <img class="instructor-photo" src="../img/InstructorBaile.png" alt="Joel — Instructor">
             <h3>Joel Sanchis</h3>
             <p class="bio">Experto en ritmos urbanos y coordinación grupal.</p>
           </article>
-
 
           <article class="instructor">
             <img class="instructor-photo" src="../img/instructorResistencia.png" alt="Pedro — Instructor">
@@ -195,12 +172,10 @@
         </div>
       </section>
 
-
       <!-- Sección 4: Galería multimedia (mínimo 5 imágenes + audio) -->
       <section id="galeria" class="panel gallery" aria-labelledby="galeria-title">
         <h2 id="galeria-title">Galería y música</h2>
         <p>Imágenes de sesiones y pistas recomendadas para bailar.</p>
-
 
         <div class="thumbs">
           <figure class="thumb"><img src="../img/Clase1.png" alt="Zumba 1"><figcaption>Clase por la mañana</figcaption></figure>
@@ -212,40 +187,26 @@
       </section>      
     </main>
 
-
     <!-- PIE (segunda barra de navegación simple e información) -->
     <footer id="footer" role="contentinfo">
       <p>© 2025 Gimnasio FitLife</p>
-
 
       <!-- barra de navegación simple en el pie -->
       <nav id="footer-nav" aria-label="Pie de página">
         <a href="../index.html">Inicio</a> |
         <a href="zumba.html">Zumba</a> |
-        <a href="rutinas.html">Rutinas</a> |
+         <a href="dietas.html">Nuestros servicios</a> |
+        <a href="Anuarbotseo.html">Boxeo</a> |
         <a href="contacto.html">Contacto</a>
       </nav>
-
 
       <address>
         Correo: <a href="mailto:fitlife@gym.com">fitlife@gym.com</a> — Tel: <a href="tel:+34600000000">+34 600 000 000</a>
       </address>
     </footer>
 
-
     <!-- Botón de contacto fijo (ejemplo de uso de fixed) -->
     <a href="./contacto.html" class="contact-fixed" aria-label="Inscripción rápida">Inscríbete</a>
-
-
-  </div> <!-- #wrapper -->
-
-
-  <!-- Enlaces externos mínimos (4) -->
-  <section aria-hidden="true" class="external-links">
-    <a href="https://www.zumba.com" target="_blank" rel="noopener">Zumba.com</a>
-    <a href="https://www.feda.net" target="_blank" rel="noopener">FEDA</a>
-    <a href="https://febd.es/es" target="_blank" rel="noopener">FEBD</a>
-    <a href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a>
-  </section>
+    </div>
 </body>
 </html>

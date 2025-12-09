@@ -91,7 +91,7 @@ main {
     position: absolute;
     top: 1270px;
     font-size: 30px;
-    margin-left: 25%;
+    margin-left: 25%
 }
 #divzumba{
     height: 50px;
@@ -109,7 +109,6 @@ main {
     top: 1350px;
     transition: transform 1s;
     box-shadow: 0 0 15px #00FF90;
-    left:400px ;
 }
 #imagezumba:hover{
     transform: scale(1.2);
