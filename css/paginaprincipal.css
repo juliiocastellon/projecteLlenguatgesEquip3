@@ -1,5 +1,5 @@
 /* ======================================================
-   paginaprincipal.css - Estilos específicos de la página
+   julio - Estilos de la pagina de inicio
    ====================================================== */
 
 /* ==========================
@@ -82,25 +82,25 @@
 
 .nosotros {
   display: flex;
-  align-items: center;         /* Centra verticalmente texto + imagen */
+  align-items: center;         
   justify-content: center;
-  gap: 40px;                   /* Espacio entre texto e imagen */
-  padding: 60px 0;             /* Márgenes arriba y abajo */
-  margin: 40px 0;              /* Márgenes exteriores */
+  gap: 40px;                   
+  padding: 60px 0;             
+  margin: 40px 0;             
 }
 
 .img-nosotros {
   flex: 1 1 350px;
   max-width: 450px;
   border-radius: 14px;
-  margin-right: 30px;          /* Empuja la imagen más a la derecha */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.20); /* Sombra elegante */
+  margin-right: 30px;          
+  box-shadow: 0 8px 20px rgba(0,0,0,0.20); 
   transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .img-nosotros:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(0,255,144,0.35); /* Glow verde al hover */
+  box-shadow: 0 10px 30px rgba(0,255,144,0.35); 
 }
 
 .texto-nosotros h2{
@@ -109,8 +109,8 @@
 }
 .texto-nosotros {
   flex: 1 1 350px;
-  text-align: justify;          /* Texto centrado */
-  margin-left: 30px;           /* Se separa de la imagen */
+  text-align: justify;          
+  margin-left: 30px;           
 }
 
 .texto-nosotros h2 {
