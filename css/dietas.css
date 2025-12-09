@@ -109,7 +109,7 @@ main {
     top: 1350px;
     transition: transform 1s;
     box-shadow: 0 0 15px #00FF90;
-    left:400px
+    margin-left: 25%;
 }
 #imagezumba:hover{
     transform: scale(1.2);
