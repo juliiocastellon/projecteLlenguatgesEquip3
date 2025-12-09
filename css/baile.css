@@ -1,215 +1,110 @@
-html{
-    background-color: #121212;
-    background-size: 100%;
-    background-attachment: fixed;
+html {
+  background-color: #121212;
+  background-size: 100%;
+  background-attachment: fixed;
 }
+
 body {
-        background-color: #121212;
-        color: #f0f0f0;
-        font-family: 'Arial', sans-serif;
-    }
-   
-#menus {
-  display: flex;
-  gap: 20px;
-  background: rgba(0, 0, 0, 0.8);
-  padding: 15px 20px;
-  justify-content: center;
+  background-color: #121212;
+  color: #f0f0f0;
+  font-family: 'Arial', sans-serif;
 }
-
-
-#menus a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-  font-family: Arial, sans-serif;
-  font-size: 18px;
-  border-radius: 5px;      
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-
-
-
-#menus a:hover {
-      background: #ff3131;    
-      transform: scale(1.05);  
-}
-
-
-
-
-
 
 .horario {
   width: 80%;
 }
+
 .container {
-      max-width: 900px;
-        padding: 20px;
+  max-width: 900px;
+  padding: 20px;
 }
 
-
-    h1 {
-        color: #B1D2CA;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-
-    p.description {
-        text-align: center;
-        font-size: 1.1em;
-        margin-bottom: 30px;
-        line-height: 1.5;
-    }
-
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 30px;
-    }
-
-
-    table, th, td {
-        border: 1px solid #5D7A58;
-    }
-
-
-    th, td {
-        padding: 12px;
-        text-align: center;
-    }
-
-
-    th {
-        background-color: #1f1f1f;
-        color: #ff4081;
-    }
-
-
-    tr:nth-child(even) {
-        background-color: #1a1a1a;
-    }
-
-
-    .cta {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-
-    .cta a {
-        background-color: #ff4081;
-        color: #fff;
-        padding: 12px 25px;
-        text-decoration: none;
-        border-radius: 8px;
-        font-weight: bold;
-        transition: background-color 0.3s;
-    }
-
-
-    .cta a:hover {
-        background-color: #e73370;
-    }
-/* ======================================================
-   baile.css - Estils específics per la pàgina Zumba
-   Respecta i no modifica main.css (main.css s'ha d'incloure abans)
-   ====================================================== */
-
-
-/* Reset CSS bàsic (complementari, no agressiu) */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+h1 {
+  color: #B1D2CA;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
+p.description {
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #5D7A58;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #1f1f1f;
+  color: rgba(83,255,163,0.8);
+}
+
+tr:nth-child(even) {
+  background-color: #1a1a1a;
+}
+
+.cta {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cta a {
+  background-color: #ff4081;
+  color: #fff;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cta a:hover {
+  background-color: #e73370;
+}
 
 /* Fonts (@font-face en 2 elements diferents) */
 @font-face {
   font-family: "FitLifeDisplay";
   src: url("../fonts/FitLifeDisplay.woff2") format("woff2"),
-       url("../fonts/FitLifeDisplay.woff") format("woff");
+    url("../fonts/FitLifeDisplay.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "FitLifeBody";
   src: url("../fonts/FitLifeBody.woff2") format("woff2"),
-       url("../fonts/FitLifeBody.woff") format("woff");
+    url("../fonts/FitLifeBody.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-
-/* Base tipogràfica local per la pàgina */
-#header h1 { font-family: "FitLifeDisplay", Arial, sans-serif; }
-body, p, label, input, select, textarea { font-family: "FitLifeBody", Arial, sans-serif; }
-
-
-/* ================================
-   Reglas estructurals del wrapper
-   ================================ */
-#wrapper {
-  padding: 18px;
-  position: relative;
-}
-
-
-/* ========================
-   Header - estils específics
-   ======================== */
-#header {
-  overflow: visible;
-  position: relative;
-  /* background-image diferent del fons general */
-  background-image: linear-gradient(120deg, rgba(83,255,163,0.06), rgba(107,197,255,0.03));
-  background-size: cover;
-}
-
-
-/* Slogan amb text-shadow i animació */
-#header .slogan {
-  display: block;
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-  animation: floatUp 1.2s ease both;
-}
-@keyframes floatUp {
-  from { transform: translateY(8px); opacity: 0; }
-  to   { transform: translateY(0); opacity: 1; }
-}
-
-
-/* Promo badge en posició absolute dins del header */
-.promo-badge {
-  position: absolute;
-  top: 18px;
-  left: 18px;
-  background: linear-gradient(90deg,var(--blue-neon-soft),var(--blue-neon));
-  color: #000;
-  padding: 8px 12px;
-  border-radius: 12px;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  box-shadow: 0 6px 18px rgba(107,197,255,0.12);
-  transform: rotate(-6deg);
-  text-transform: uppercase;
-}
-
-
 /* Logo amb transform al passar el cursor (ja hi ha en main.css, aquest afegeix transform addicional) */
-#logo { transition: transform .25s ease, box-shadow .25s ease; }
-#logo:hover { transform: scale(1.12) rotate(-4deg); }
+#logo {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
 
+#logo:hover {
+  transform: scale(1.12) rotate(-4deg);
+}
 
 /* =========================
    Top mini nav (fixed)
@@ -217,17 +112,26 @@ body, p, label, input, select, textarea { font-family: "FitLifeBody", Arial, san
 .fixed-nav {
   position: fixed;
   right: 20px;
-  top: 140px; /* no tapa el header */
-  background: rgba(27,35,48,0.9);
+  top: 140px;
+  /* no tapa el header */
+  background: rgba(27, 35, 48, 0.9);
   padding: 8px 10px;
   border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
   z-index: 60;
   transition: opacity .3s ease, transform .3s ease;
 }
-.fixed-nav a { color: var(--text-light); text-decoration: none; padding: 4px 6px; }
-.fixed-nav a:hover { text-decoration: underline; transform: translateX(4px); }
 
+.fixed-nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 4px 6px;
+}
+
+.fixed-nav a:hover {
+  text-decoration: underline;
+  transform: translateX(4px);
+}
 
 /* ======================
    Panels (sections)
@@ -236,14 +140,17 @@ body, p, label, input, select, textarea { font-family: "FitLifeBody", Arial, san
   margin: 20px 0;
   padding: 16px;
   border-radius: 10px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.03));
-  box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(0, 0, 0, 0.03));
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
   position: relative;
 }
 
-
 /* Primer caràcter amb style (first-letter) */
-.panel h2::first-letter { font-size: 1.6em; color: var(--accent); font-weight: 900; }
+.panel h2::first-letter {
+  font-size: 1.6em;
+  color: var(--accent);
+  font-weight: 900;
+}
 
 
 /* ===========================
@@ -253,20 +160,25 @@ body, p, label, input, select, textarea { font-family: "FitLifeBody", Arial, san
   margin-top: 12px;
   border-radius: 10px;
   overflow: hidden;
-  background-image: radial-gradient(circle at center, rgba(83,255,163,0.06), rgba(0,0,0,0.05));
+  background-image: radial-gradient(circle at center, rgba(83, 255, 163, 0.06), rgba(0, 0, 0, 0.05));
 }
+
+
 .cover-img {
   width: 100%;
   display: block;
   transform-origin: center;
   transition: transform .6s ease, filter .4s ease;
 }
-.cover-img:hover { transform: scale(1.02) rotate(-0.5deg); filter: saturate(1.07); }
 
 
+.cover-img:hover {
+  transform: scale(1.02) rotate(-0.5deg);
+  filter: saturate(1.07);
+}
 
-
-.schedule-table, .price-table {
+.schedule-table,
+.price-table {
   margin-top: 14px;
   border-radius: 8px;
   overflow: hidden;
@@ -275,10 +187,15 @@ body, p, label, input, select, textarea { font-family: "FitLifeBody", Arial, san
 }
 
 
+
+
 /* text-shadow per cèl·lules de la taula */
-.schedule-table th, .price-table th {
-  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+.schedule-table th,
+.price-table th {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
+
+
 
 
 /* =========================
@@ -292,16 +209,20 @@ body, p, label, input, select, textarea { font-family: "FitLifeBody", Arial, san
 }
 
 
+
+
 /* Cada instructor utilitza float per a la foto i contenidor de text */
 .instructor {
   flex: 1 1 30%;
   min-width: 230px;
-  background-image: linear-gradient(90deg, rgba(83,255,163,0.02), rgba(107,197,255,0.01));
+  background-image: linear-gradient(90deg, rgba(83, 255, 163, 0.02), rgba(107, 197, 255, 0.01));
   border-radius: 8px;
   padding: 12px;
   position: relative;
   overflow: hidden;
 }
+
+
 .instructor-photo {
   width: 120px;
   height: 120px;
@@ -309,11 +230,17 @@ body, p, label, input, select, textarea { font-family: "FitLifeBody", Arial, san
   float: left;
   margin-right: 12px;
   border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
   transform: translateZ(0);
   transition: transform .35s ease;
 }
-.instructor:hover .instructor-photo { transform: scale(1.05) translateY(-4px); }
+
+
+.instructor:hover .instructor-photo {
+  transform: scale(1.05) translateY(-4px);
+}
+
+
 
 
 /* Decoracions via pseudo-elements (before/after) */
@@ -324,86 +251,119 @@ body, p, label, input, select, textarea { font-family: "FitLifeBody", Arial, san
   top: -40px;
   width: 160px;
   height: 160px;
-  background: radial-gradient(circle at 20% 20%, rgba(83,255,163,0.08), transparent 40%);
+  background: radial-gradient(circle at 20% 20%, rgba(83, 255, 163, 0.08), transparent 40%);
   transform: rotate(20deg);
   pointer-events: none;
 }
 
 
+
+
 /* Selector avançats CSS3 */
-.instructor-list > .instructor:first-child { border: 2px solid rgba(83,255,163,0.06); }
-.instructor-list > .instructor:nth-child(2) { filter: hue-rotate(10deg); }
-.instructor-list > .instructor:last-child { border-style: dashed; }
+.instructor-list>.instructor:first-child {
+  border: 2px solid rgba(83, 255, 163, 0.06);
+}
+
+
+.instructor-list>.instructor:nth-child(2) {
+  filter: hue-rotate(10deg);
+}
+
+
+.instructor-list>.instructor:last-child {
+  border-style: dashed;
+}
+
+
 
 
 /* =========================
    Galeria (utilitza float per miniatures)
    ========================= */
-.thumbs { margin-top: 12px; }
+.thumbs {
+  margin-top: 12px;
+}
+
+
 .thumb {
   width: calc(20% - 8px);
-  float: left; /* requisit: float per galeria */
+  float: left;
+  /* requisit: float per galeria */
   margin-right: 6px;
   margin-bottom: 12px;
   border-radius: 6px;
   overflow: hidden;
-  background-image: url('../assets/img/thumb-bg.png');
+  background-image: url(./img/baletbonito.jpg);
   background-size: cover;
   transition: transform .25s ease, box-shadow .25s ease;
 }
-.thumb img { width: 100%; display: block; }
-.thumb:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 12px 30px rgba(0,0,0,0.6); }
-.thumb:nth-child(5) { margin-right: 0; }
+
+
+.thumb img {
+  width: 100%;
+  display: block;
+}
+
+
+.thumb:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+
+.thumb:nth-child(5) {
+  margin-right: 0;
+}
+
+
 
 
 /* Clearfix per contenidors amb floats */
-.thumbs::after, .instructor-list::after { content: ""; display: table; clear: both; }
+.thumbs::after,
+.instructor-list::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 
 
 /* =========================
    Audio box
    ========================= */
-.audio-box { margin-top: 12px; padding: 8px; background-image: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(83,255,163,0.01)); border-radius: 8px; }
-
-
-/* =========================
-   Formulari - estils i transicions
-   ========================= */
-
-
-input:focus, textarea:focus, select:focus {
-  outline: none;
-  box-shadow: 0 0 12px rgba(83,255,163,0.12);
-  transform: translateY(-2px);
+.audio-box {
+  margin-top: 12px;
+  padding: 8px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(83, 255, 163, 0.01));
+  border-radius: 8px;
 }
 
 
-/* Pseudoclasses per validació */
-input:required:invalid { border-color: #ff6b6b; }
-input:required:valid { border-color: var(--accent-soft); box-shadow: 0 6px 18px rgba(83,255,163,0.06); }
-
-
-/* Estils per elements requerits via :required i pseudoclasse required (JS-free) */
-.req { color: var(--accent); font-weight: 700; }
 
 
 /* Botons amb animació i transform */
-.btn { padding: 10px 14px; border-radius: 10px; cursor: pointer; border: none; font-weight: 700; }
+.btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+}
+
+
 .btn.primary {
-  background: linear-gradient(90deg,var(--accent),var(--accent-soft));
+  background: linear-gradient(90deg, var(--accent), var(--accent-soft));
   color: #000;
-  box-shadow: 0 10px 30px rgba(83,255,163,0.06);
+  box-shadow: 0 10px 30px rgba(83, 255, 163, 0.06);
   transition: transform .18s ease, box-shadow .25s ease;
 }
-.btn.primary:hover { transform: translateY(-4px) scale(1.02); box-shadow: 0 18px 40px rgba(83,255,163,0.12); }
 
 
-/* =========================
-   Footer y nav del footer
-   ========================= */
-#footer { margin-top: 28px; display: block; position: relative; background-image: url('../assets/img/footer-bg.jpg'); }
-#footer nav a { color: var(--text-soft); text-decoration: none; padding: 4px; }
-#footer nav a:hover { text-shadow: var(--shadow-neon); transform: translateY(-2px); }
+.btn.primary:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(83, 255, 163, 0.12);
+}
 
 
 /* =========================
@@ -418,93 +378,172 @@ input:required:valid { border-color: var(--accent-soft); box-shadow: 0 6px 18px 
   padding: 12px 14px;
   border-radius: 30px;
   font-weight: 800;
-  box-shadow: 0 12px 38px rgba(83,255,163,0.1);
+  box-shadow: 0 12px 38px rgba(83, 255, 163, 0.1);
   text-decoration: none;
   z-index: 200;
   transition: transform .2s ease, opacity .2s ease;
 }
-.contact-fixed:hover { transform: translateY(-6px) rotate(-1deg); opacity: 0.95; }
+
+
+.contact-fixed:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  opacity: 0.95;
+}
+
+
 
 
 /* =========================
    Transicions i animacions diverses (mínim 3 elements)
    ========================= */
 @keyframes pulseGlow {
-  0% { box-shadow: 0 0 0 rgba(83,255,163,0.0); transform: scale(1); }
-  50% { box-shadow: 0 0 20px rgba(83,255,163,0.12); transform: scale(1.02); }
-  100% { box-shadow: 0 0 0 rgba(83,255,163,0.0); transform: scale(1); }
+  0% {
+    box-shadow: 0 0 0 rgba(83, 255, 163, 0.0);
+    transform: scale(1);
+  }
+
+
+  50% {
+    box-shadow: 0 0 20px rgba(83, 255, 163, 0.12);
+    transform: scale(1.02);
+  }
+
+
+  100% {
+    box-shadow: 0 0 0 rgba(83, 255, 163, 0.0);
+    transform: scale(1);
+  }
 }
-.btn.primary { animation: pulseGlow 6s infinite; }
+
+
+.btn.primary {
+  animation: pulseGlow 6s infinite;
+}
+
+
 
 
 @keyframes slideInLeft {
-  from { transform: translateX(-18px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
-.instructor { animation: slideInLeft 0.6s ease both; }
+  from {
+    transform: translateX(-18px);
+    opacity: 0;
+  }
 
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.instructor {
+  animation: slideInLeft 0.6s ease both;
+}
 
 @keyframes floatUpSlow {
-  from { transform: translateY(12px); }
-  to { transform: translateY(0); }
-}
-.panel h2 { animation: floatUpSlow 0.8s ease both; }
+  from {
+    transform: translateY(12px);
+  }
 
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.panel h2 {
+  animation: floatUpSlow 0.8s ease both;
+}
 
 /* =========================
    Background images diferents en 4 elements (no fons de pàgina)
    - hero-media, schedule-table, thumbs, footer
    ========================= */
-.hero-media { background-image: url('../assets/img/hero-bg.jpg'); background-size: cover; background-position: center; }
-.schedule-table { background-image: url('../assets/img/schedule-bg.jpg'); background-size: cover; }
-.thumbs { background-image: url('../assets/img/gallery-bg.jpg'); background-size: cover; }
-#footer { background-image: url('../assets/img/footer-bg.jpg'); background-size: cover; }
+.hero-media {
+  background-image: url('../assets/img/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
 
+.schedule-table {
+  background-image: url('../assets/img/schedule-bg.jpg');
+  background-size: cover;
+}
 
-
-
-
-
-
+.thumbs {
+  background-image: url('../assets/img/gallery-bg.jpg');
+  background-size: cover;
+}
 
 /* first-child / last-child / nth-child / attribute selectors examples */
-.instructor[data-type="senior"] h3::after { content: " — Capacitació senior"; font-size: 0.8em; color: var(--accent-soft); display: block; margin-top: 4px; }
-.instructor-list > .instructor:nth-child(odd) { transform: translateY(0); }
-.instructor-list > .instructor:nth-child(even) { transform: translateY(6px); }
+.instructor[data-type="senior"] h3::after {
+  content: " — Capacitació senior";
+  font-size: 0.8em;
+  color: var(--accent-soft);
+  display: block;
+  margin-top: 4px;
+}
 
+.instructor-list>.instructor:nth-child(odd) {
+  transform: translateY(0);
+}
+
+.instructor-list>.instructor:nth-child(even) {
+  transform: translateY(6px);
+}
 
 /* Adjacent sibling and child selector examples */
-.panel > h2 + p { margin-top: 8px; color: var(--text-soft); }
-.thumb + .thumb { margin-left: 6px; }
+.panel>h2+p {
+  margin-top: 8px;
+  color: var(--text-soft);
+}
 
+.thumb+.thumb {
+  margin-left: 6px;
+}
 
 /* =========================
    Media queries per responsivitat
    ========================= */
 @media (max-width: 900px) {
-  .instructor-list { flex-direction: column; }
-  .thumb { width: calc(50% - 8px); }
-  .fixed-nav { display: none; } /* ocultem fixed nav en mòbil */
-}
+  .instructor-list {
+    flex-direction: column;
+  }
+  .thumb {
+    width: calc(50% - 8px);
+  }
+  .fixed-nav {
+    display: none;
+  }
 
+}
 
 /* =========================
    Accessibility: focus outline visible
    ========================= */
-a:focus, button:focus, input:focus, select:focus, textarea:focus {
-  outline: 3px dashed rgba(83,255,163,0.18);
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px dashed rgba(83, 255, 163, 0.18);
   outline-offset: 4px;
 }
+
 
 /* =========================
    Utilitats finals
    ========================= */
-.hidden { display: none !important; }
-.visually-hidden {
-  position: absolute !important;
-  height: 1px; width: 1px;
-  overflow: hidden; clip: rect(1px,1px,1px,1px);
+.hidden {
+  display: none !important;
 }
 
 
-/* End of baile.css */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
