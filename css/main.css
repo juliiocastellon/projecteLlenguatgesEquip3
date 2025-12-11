@@ -73,10 +73,15 @@ body {
   position: absolute;
   right: 20px;
   top: 20px;
-  transition: 0.25s ease;
+  animation: moverLogo 3s infinite ease-in-out;
 }
 
-#logo:hover { transform: scale(1.05); }
+@keyframes moverLogo {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.25); }  /* Esto hace que crezca aprox 100px */
+  100% { transform: scale(1); }
+}
+
 
 /* ============================
    MENÚ (Nav)
