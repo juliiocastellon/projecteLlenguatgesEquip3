@@ -1,4 +1,9 @@
 User-agent: *
+Disallow: /css/
+Disallow: /fuentes/
+Disallow: /img/
+
 Allow: /
+Allow: /html/
 
 Sitemap: http://localhost/sitemap.xml
