@@ -390,3 +390,11 @@ input[type="radio"]:invalid {
   border: none !important;
   box-shadow: none !important;
 }
+#info-contacto h2 {
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+  color: var(--accent);
+  text-shadow: 0 0 18px var(--accent);
+  letter-spacing: 1px;
+  font-weight: 900;
+}
