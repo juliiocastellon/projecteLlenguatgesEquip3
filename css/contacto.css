@@ -1,38 +1,38 @@
 
-/* 
-   VARIABLES NEÓN
-   */
+/*   VARIABLES DE COLOR – ESTILO NEÓN*/
+   
 :root {
-  --dark-1: #0A0F1F;
-  --dark-2: #1B2330;
+  --dark-1: #0A0F1F;         /* Fondo principal */
+  --dark-2: #1B2330;         /* Paneles y bloques */
 
-  --accent: #00FF90;
-  --accent-soft: #00CC73;
+  --accent: #00FF90;         /* Verde neón */
+  --accent-soft: #00CC73;    /* Verde suave */
 
-  --text-light: #E8F1F2;
-  --text-soft: #A7B7BE;
+  --text-light: #E8F1F2;     /* Texto claro */
+  --text-soft: #A7B7BE;      /* Texto gris suave */
 
-  --shadow-neon: 0 0 12px #00FF90;
+  --shadow-neon: 0 0 12px #00FF90;  /* Brillo neón */
 
-  /* Nuevos colores para enlaces */
+  /* Colores para los enlaces externos */
   --blue-neon: #3ad0ff;
   --blue-neon-soft: #7fe6ff;
 }
-/*
-   GLOBAL
- */
+
+/*ESTILO GENERAL DE LA PÁGINA */
 body {
   font-family: Arial, sans-serif;
   background: radial-gradient(circle at top, var(--dark-1), #000 90%);
   color: var(--text-light);
-  animation: fadeInPage 1s ease;
+  animation: aparece 1s ease;
 }
 
-@keyframes fadeInPage {
+/* Animación de aparición */
+@keyframes aparece {
   from { opacity: 0; transform: translateY(15px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
+/* Contenedor principal */
 #wrapper {
   width: 100%;
   max-width: 100%;
@@ -40,9 +40,7 @@ body {
   padding: 20px;
 }
 
-/* 
-   HEADER
-  */
+/*CABECERA*/
 #header {
   background: var(--dark-2);
   padding: 30px;
@@ -53,8 +51,8 @@ body {
   position: relative;
 }
 
-/* animación tracking */
-@keyframes tracking-in-expand {
+/* Animación del título */
+@keyframes animTitulo {
   0%   { letter-spacing: -0.5em; opacity: 0; }
   40%  { opacity: 0.6; }
   100% { letter-spacing: normal; opacity: 1; }
@@ -68,9 +66,10 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: var(--shadow-neon);
-  animation: tracking-in-expand 1.2s ease both;
+  animation: animTitulo 1.2s ease both;
 }
 
+/* Logo superior */
 #logo {
   width: 85px;
   position: absolute;
@@ -83,9 +82,9 @@ body {
   transform: scale(1.05);
 }
 
-/* 
-   NAV
-    */
+
+/*   MENÚ DE NAVEGACIÓN*/
+  
 #main-nav ul {
   list-style: none;
   display: flex;
@@ -99,11 +98,11 @@ body {
 }
 
 #main-nav a {
-  text-decoration: none;
   color: var(--text-light);
   padding: 10px 22px;
   border-radius: 6px;
   font-weight: bold;
+  text-decoration: none;
   transition: 0.25s;
 }
 
@@ -118,9 +117,9 @@ body {
   color: #000;
 }
 
-/* 
-   INTRO
-    */
+
+/*   INTRODUCCIÓN*/
+   
 #intro {
   text-align: center;
   margin: 20px auto;
@@ -135,9 +134,9 @@ body {
   font-size: 2rem;
 }
 
-/* 
-   FORMULARIO
-    */
+
+/*   FORMULARIO DE CONTACTO */
+   
 #form-columns {
   display: flex;
   gap: 35px;
@@ -146,21 +145,23 @@ body {
 
 .columna {
   width: 50%;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(0,255,144,0.25);
   padding: 22px;
+  background: rgba(255,255,255,0.05);
   border-radius: 12px;
+  border: 1px solid rgba(0,255,144,0.25);
+  backdrop-filter: blur(8px);
   box-shadow: 0 0 15px rgba(0,255,144,0.08);
   transition: 0.3s;
   position: relative;
 }
 
+/* Efecto al pasar el ratón */
 .columna:hover {
   transform: translateY(-4px);
   box-shadow: 0 0 18px rgba(0,255,144,0.18);
 }
 
+/* Estrella decorativa */
 .columna::after {
   content: "✦";
   position: absolute;
@@ -169,28 +170,28 @@ body {
   color: rgba(0,255,144,0.35);
 }
 
-/* 
-   INPUTS
-  */
+
+/*   CAMPOS DE TEXTO DEL FORMULARIO  */
+   
 input, textarea, select {
   width: 100%;
   padding: 12px;
   margin-top: 6px;
   border-radius: 6px;
-  background: rgba(255,255,255,0.1);
   border: 1px solid var(--accent);
+  background: rgba(255,255,255,0.1);
   color: var(--text-light);
   transition: 0.25s;
 }
 
-input:focus, textarea:focus, select:focus {
+input:focus,
+textarea:focus,
+select:focus {
   box-shadow: 0 0 12px var(--accent);
   background: rgba(0,0,0,0.4);
 }
 
-/* 
-   VALIDACIÓN HTML5
-    */
+/* Validaciones HTML5 */
 input:valid,
 textarea:valid,
 select:valid {
@@ -208,12 +209,11 @@ select:invalid {
 input:placeholder-shown,
 textarea:placeholder-shown {
   border: 1px solid rgba(255,255,255,0.3);
-  box-shadow: none;
 }
 
-/* 
-   RADIO y CHECKBOX alineados
-    */
+
+ /*  RADIO BUTTONS Y CHECKBOX */
+   
 .grupo-form {
   margin-top: 15px;
   display: flex;
@@ -240,24 +240,24 @@ textarea:placeholder-shown {
   font-weight: bold;
 }
 
-/* 
-   BOTONES
-   */
+
+  /* BOTONES DEL FORMULARIO */
+   
 #botones-centro {
   text-align: center;
   margin: 30px 0;
 }
 
 .btn {
+  padding: 12px 26px;
+  border-radius: 8px;
   background: var(--accent);
   border: none;
-  padding: 12px 26px;
-  font-weight: bold;
-  border-radius: 8px;
   cursor: pointer;
+  font-weight: bold;
   color: #000;
-  box-shadow: var(--shadow-neon);
   transition: 0.25s;
+  box-shadow: var(--shadow-neon);
 }
 
 .btn:hover {
@@ -274,14 +274,14 @@ textarea:placeholder-shown {
   background: #555;
 }
 
-/* 
-   INFO CONTACTO
-   */
+
+ /*  DIRECCIÓN, EMAIL, HORARIO… */
+   
 #info-contacto {
   margin-top: 40px;
   padding: 25px;
-  background: rgba(255,255,255,0.04);
   border-radius: 12px;
+  background: rgba(255,255,255,0.04);
   border: 1px solid rgba(0,255,144,0.25);
   text-align: center;
 }
@@ -293,10 +293,10 @@ textarea:placeholder-shown {
 }
 
 .info-box {
-  background: rgba(0,0,0,0.35);
-  border: 1px solid var(--accent-soft);
-  border-radius: 10px;
   padding: 20px;
+  background: rgba(0,0,0,0.35);
+  border-radius: 10px;
+  border: 1px solid var(--accent-soft);
   transition: 0.3s;
 }
 
@@ -305,11 +305,7 @@ textarea:placeholder-shown {
   box-shadow: 0 0 18px rgba(0,255,144,0.25);
 }
 
-.info-box h3 {
-  color: var(--accent);
-}
-
-/* icono */
+/* Icono grande de ubicación */
 .icono-ubicacion {
   margin-top: 30px;
   font-size: 3rem;
@@ -317,13 +313,8 @@ textarea:placeholder-shown {
   animation: ubicacionGlow 2s infinite alternate;
 }
 
-@keyframes ubicacionGlow {
-  from { opacity: 0.6; transform: scale(1); }
-  to   { opacity: 1; transform: scale(1.2); }
-}
-
-/* 
-   INSTAGRAM BOX */
+ 
+  /* CUADRO DE INSTAGRAM */
    
 .instagram-box {
   width: 330px;
@@ -335,8 +326,8 @@ textarea:placeholder-shown {
   align-items: center;
 
   background: rgba(0,0,0,0.35);
-  border: 1px solid var(--accent-soft);
   border-radius: 15px;
+  border: 1px solid var(--accent-soft);
   box-shadow: 0 0 20px rgba(0,255,144,0.20);
   transition: 0.35s;
 }
@@ -349,8 +340,8 @@ textarea:placeholder-shown {
 .icon-instagram {
   width: 120px;
   cursor: pointer;
-  filter: drop-shadow(0 0 12px var(--accent));
   transition: 0.35s;
+  filter: drop-shadow(0 0 12px var(--accent));
 }
 
 .icon-instagram:hover {
@@ -358,9 +349,9 @@ textarea:placeholder-shown {
   filter: drop-shadow(0 0 25px var(--accent-soft));
 }
 
-/* ============================
-   RESPONSIVE
-   ============================ */
+
+   /*RESPONSIVE PARA MÓVILES*/
+   
 @media (max-width: 800px) {
   #form-columns {
     flex-direction: column;
@@ -369,4 +360,31 @@ textarea:placeholder-shown {
   .info-grid {
     grid-template-columns: 1fr;
   }
+}
+
+
+
+
+  /* Quitar brillo del slider, checkbox y radios*/
+  
+
+/* Slider (range) limpio */
+input[type="range"]:valid,
+input[type="range"]:invalid {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Checkbox limpio */
+input[type="checkbox"]:valid,
+input[type="checkbox"]:invalid {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Botones de radio (Sí / No) */
+input[type="radio"]:valid,
+input[type="radio"]:invalid {
+  border: none !important;
+  box-shadow: none !important;
 }
