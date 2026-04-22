@@ -24,4 +24,26 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 0);
     });
 
+    // Al enviar el formulario: valida los campos y, si son correctos, prepara los datos
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        if (!validarFormulario()) {
+            return;
+        }
+
+        const datos = {
+            nombre:  document.getElementById('nombre').value.trim(),
+            email:   document.getElementById('email').value.trim(),
+            edad:    document.getElementById('edad').value.trim(),
+            asunto:  document.getElementById('asunto').value.trim(),
+            mensaje: document.getElementById('mensaje').value.trim(),
+            miembro: document.querySelector('input[name="miembro"]:checked').value
+        };
+
+        console.log('Formulario válido. Datos recogidos:', datos);
+
+        // TODO: integración con clase Missatge de Julio
+    });
+
 });
