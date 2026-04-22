@@ -398,3 +398,23 @@ input[type="radio"]:invalid {
   letter-spacing: 1px;
   font-weight: 900;
 }
+
+
+/* Mensajes de error de validación JS */
+
+.error-msg {
+  display: block;
+  color: #ff3b3b;
+  font-size: 0.85em;
+  margin-top: 3px;
+  margin-bottom: 6px;
+  min-height: 1.1em;
+}
+
+#contador-mensaje {
+  display: block;
+  font-size: 0.82em;
+  color: var(--text-soft);
+  text-align: right;
+  margin-top: 4px;
+}
