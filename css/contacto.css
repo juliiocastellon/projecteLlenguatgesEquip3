@@ -173,17 +173,31 @@ body {
 }
 
 
+/*   AGRUPACIÓN DE CAMPO (label + input + error) */
+
+.campo-grupo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.campo-grupo input,
+.campo-grupo textarea,
+.campo-grupo select {
+  margin-top: 4px;
+}
+
+
 /*   CAMPOS DE TEXTO DEL FORMULARIO  */
-   
+
 input, textarea, select {
   width: 100%;
   padding: 12px;
-  margin-top: 6px;
   border-radius: 6px;
   border: 1px solid var(--accent);
   background: rgba(255,255,255,0.1);
   color: var(--text-light);
-  transition: 0.25s;
+  transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
 }
 
 input:focus,
@@ -191,26 +205,20 @@ textarea:focus,
 select:focus {
   box-shadow: 0 0 12px var(--accent);
   background: rgba(0,0,0,0.4);
+  outline: none;
 }
 
-/* Validaciones HTML5 */
-input:valid,
-textarea:valid,
-select:valid {
-  border-color: var(--blue-neon);
-  box-shadow: 0 0 10px var(--blue-neon);
-}
-
-input:invalid,
-textarea:invalid,
-select:invalid {
-  border-color: #ff3b3b;
-  box-shadow: 0 0 10px #ff3b3b88;
-}
-
+/* Campos neutros cuando están vacíos con placeholder */
 input:placeholder-shown,
 textarea:placeholder-shown {
-  border: 1px solid rgba(255,255,255,0.3);
+  border-color: rgba(255,255,255,0.3);
+  box-shadow: none;
+}
+
+/* Campo marcado como inválido por JavaScript */
+.input-invalido {
+  border-color: #ff3b3b !important;
+  box-shadow: 0 0 10px #ff3b3b88 !important;
 }
 
 
@@ -402,19 +410,28 @@ input[type="radio"]:invalid {
 
 /* Mensajes de error de validación JS */
 
+@keyframes fadeInError {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 .error-msg {
   display: block;
-  color: #ff3b3b;
-  font-size: 0.85em;
-  margin-top: 3px;
-  margin-bottom: 6px;
-  min-height: 1.1em;
+  color: #ff5555;
+  font-size: 0.82em;
+  min-height: 1.2em;
+  margin-top: 4px;
+}
+
+.error-msg:not(:empty) {
+  animation: fadeInError 0.18s ease forwards;
 }
 
 #contador-mensaje {
   display: block;
-  font-size: 0.82em;
+  font-size: 0.80em;
   color: var(--text-soft);
   text-align: right;
-  margin-top: 4px;
+  margin-top: 3px;
+  transition: color 0.2s;
 }

@@ -31,15 +31,31 @@ const nombreRegex = /^[a-zA-ZÀ-ÿ\s]{3,}$/;
 // Regex para asunto: cualquier texto de entre 3 y 100 caracteres
 const asuntoRegex = /^.{3,100}$/;
 
-// Escribe un mensaje de error en el span identificado por idSpan
+// Relación entre el id del span de error y el id del input correspondiente
+const CAMPO_POR_SPAN = {
+    'error-nombre':  'nombre',
+    'error-email':   'email',
+    'error-edad':    'edad',
+    'error-asunto':  'asunto',
+    'error-mensaje': 'mensaje'
+};
+
+// Escribe un mensaje de error y marca el input con la clase visual de error
 function mostrarError(idSpan, mensaje) {
     const span = document.getElementById(idSpan);
     if (span) span.textContent = mensaje;
+
+    const idCampo = CAMPO_POR_SPAN[idSpan];
+    if (idCampo) {
+        const campo = document.getElementById(idCampo);
+        if (campo) campo.classList.add('input-invalido');
+    }
 }
 
-// Borra todos los mensajes de error del formulario
+// Borra todos los mensajes de error y quita la marca visual de los inputs
 function limpiarErrores() {
     document.querySelectorAll('.error-msg').forEach(function (s) { s.textContent = ''; });
+    document.querySelectorAll('.input-invalido').forEach(function (i) { i.classList.remove('input-invalido'); });
 }
 
 /**

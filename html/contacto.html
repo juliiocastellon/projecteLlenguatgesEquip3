@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
 
-
     <!-- CSS -->
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/main.css">
@@ -48,7 +47,7 @@
         </section>
 
         <!-- FORMULARIO -->
-        <form id="contact-form">
+        <form id="contact-form" novalidate>
 
             <section id="form-columns">
 
@@ -56,56 +55,73 @@
                 <div class="columna">
                     <h3>Tus Datos</h3>
 
-                    <label for="nombre">Nombre completo:</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Marc Peiró" autofocus>
-                    <span class="error-msg" id="error-nombre"></span>
+                    <div class="campo-grupo">
+                        <label for="nombre">Nombre completo:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Marc Peiró" autofocus>
+                        <span class="error-msg" id="error-nombre"></span>
+                    </div>
 
-                    <label for="asunto">Asunto:</label>
-                    <input type="text" id="asunto" name="asunto" placeholder="Motivo de tu mensaje">
-                    <span class="error-msg" id="error-asunto"></span>
+                    <div class="campo-grupo">
+                        <label for="asunto">Asunto:</label>
+                        <input type="text" id="asunto" name="asunto" placeholder="Motivo de tu mensaje">
+                        <span class="error-msg" id="error-asunto"></span>
+                    </div>
 
-                    <label for="email">Correo electrónico:</label>
-                    <input type="text" id="email" name="email" placeholder="ejemplo@gmail.com">
-                    <span class="error-msg" id="error-email"></span>
+                    <div class="campo-grupo">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="text" id="email" name="email" placeholder="ejemplo@gmail.com">
+                        <span class="error-msg" id="error-email"></span>
+                    </div>
 
-                    <label for="telefono">Teléfono:</label>
-                    <input type="tel" id="telefono" name="telefono" placeholder="123456789">
+                    <div class="campo-grupo">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="123456789">
+                    </div>
 
-                    <label for="edad">Edad:</label>
-                    <input type="text" id="edad" name="edad" placeholder="Ej: 25">
-                    <span class="error-msg" id="error-edad"></span>
+                    <div class="campo-grupo">
+                        <label for="edad">Edad:</label>
+                        <input type="text" id="edad" name="edad" placeholder="Ej: 25">
+                        <span class="error-msg" id="error-edad"></span>
+                    </div>
 
-                    <label for="fecha">Fecha preferida de contacto:</label>
-                    <input type="date" id="fecha" name="fecha">
+                    <div class="campo-grupo">
+                        <label for="fecha">Fecha preferida de contacto:</label>
+                        <input type="date" id="fecha" name="fecha">
+                    </div>
 
-                    <label for="motivo">Motivo de contacto:</label>
-                    <select id="motivo" name="motivo">
-                        <option value="">Selecciona una opción</option>
-                        <option value="informacion">Solicitar información</option>
-                        <option value="inscripcion">Inscripción a clases</option>
-                        <option value="queja">Queja o sugerencia</option>
-                    </select>
+                    <div class="campo-grupo">
+                        <label for="motivo">Motivo de contacto:</label>
+                        <select id="motivo" name="motivo">
+                            <option value="">Selecciona una opción</option>
+                            <option value="informacion">Solicitar información</option>
+                            <option value="inscripcion">Inscripción a clases</option>
+                            <option value="queja">Queja o sugerencia</option>
+                        </select>
+                    </div>
 
                     <!-- DATALIST -->
-                    <label for="conociste">¿Cómo nos conociste?</label>
-                    <input list="origen" id="conociste" name="conociste" placeholder="Redes sociales">
-
-                    <datalist id="origen">
-                        <option value="Instagram">
-                        <option value="TikTok">
-                        <option value="Google">
-                        <option value="Recomendación de un amigo">
-                    </datalist>
+                    <div class="campo-grupo">
+                        <label for="conociste">¿Cómo nos conociste?</label>
+                        <input list="origen" id="conociste" name="conociste" placeholder="Redes sociales">
+                        <datalist id="origen">
+                            <option value="Instagram">
+                            <option value="TikTok">
+                            <option value="Google">
+                            <option value="Recomendación de un amigo">
+                        </datalist>
+                    </div>
                 </div>
 
                 <!-- DERECHA -->
                 <div class="columna">
                     <h3>Tu Mensaje</h3>
 
-                    <label for="mensaje">Cuéntanos tu consulta:</label>
-                    <textarea id="mensaje" name="mensaje" rows="9" placeholder="Escribe tu mensaje..."></textarea>
-                    <span class="error-msg" id="error-mensaje"></span>
-                    <span id="contador-mensaje">0/500 caracteres</span>
+                    <div class="campo-grupo">
+                        <label for="mensaje">Cuéntanos tu consulta:</label>
+                        <textarea id="mensaje" name="mensaje" rows="9" placeholder="Escribe tu mensaje..."></textarea>
+                        <span class="error-msg" id="error-mensaje"></span>
+                        <span id="contador-mensaje">0/500 caracteres</span>
+                    </div>
 
                     <div class="grupo-form">
                         <p>¿Eres miembro del gimnasio?</p>
@@ -148,6 +164,9 @@
             </div>
 
         </form>
+
+        <!-- ZONA DE MENSAJES (Julio pintará los objetos aquí) -->
+        <section id="lista-mensajes"></section>
 
         <!-- INFO CONTACTO / UBICACIÓN -->
         <section id="info-contacto">
