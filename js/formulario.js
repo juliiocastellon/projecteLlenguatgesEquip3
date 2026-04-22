@@ -2,5 +2,16 @@
 // Autor: Marc Peiró — Fase IV (JavaScript)
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Se añadirá la lógica del formulario en futuras iteraciones
+
+    const textarea = document.getElementById('mensaje');
+    const contador = document.getElementById('contador-mensaje');
+    const LIMITE   = 500;
+
+    // Actualiza el contador de caracteres cada vez que el usuario escribe
+    textarea.addEventListener('input', function () {
+        const total = textarea.value.length;
+        contador.textContent = total + '/' + LIMITE + ' caracteres';
+        contador.style.color = total > LIMITE ? '#ff3b3b' : '';
+    });
+
 });
