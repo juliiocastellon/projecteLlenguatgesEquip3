@@ -37,6 +37,7 @@ function validarFormulario() {
     const edad    = document.getElementById('edad').value.trim();
     const asunto  = document.getElementById('asunto').value.trim();
     const mensaje = document.getElementById('mensaje').value.trim();
+    const miembro = document.querySelector('input[name="miembro"]:checked');
 
     // Validar nombre completo
     if (!nombre) {
@@ -80,6 +81,12 @@ function validarFormulario() {
         valido = false;
     } else if (mensaje.length > 500) {
         mostrarError('error-mensaje', 'El mensaje no puede superar los 500 caracteres.');
+        valido = false;
+    }
+
+    // Validar que se haya seleccionado una opción del grupo de radio buttons
+    if (!miembro) {
+        mostrarError('error-miembro', 'Indica si eres miembro del gimnasio.');
         valido = false;
     }
 
