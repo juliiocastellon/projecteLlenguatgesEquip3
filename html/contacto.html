@@ -57,22 +57,29 @@
                     <h3>Tus Datos</h3>
 
                     <label for="nombre">Nombre completo:</label>
-                    <input type="text" id="nombre" name="nombre" required minlength="3" placeholder="Ej: Marc Peiró" autofocus>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Marc Peiró" autofocus>
+                    <span class="error-msg" id="error-nombre"></span>
+
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="Motivo de tu mensaje">
+                    <span class="error-msg" id="error-asunto"></span>
 
                     <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="email" required placeholder="ejemplo@gmail.com">
+                    <input type="text" id="email" name="email" placeholder="ejemplo@gmail.com">
+                    <span class="error-msg" id="error-email"></span>
 
                     <label for="telefono">Teléfono:</label>
-                    <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{9}" placeholder="123456789">
+                    <input type="tel" id="telefono" name="telefono" placeholder="123456789">
 
                     <label for="edad">Edad:</label>
-                    <input type="number" id="edad" name="edad" min="12" max="90" placeholder="21">
+                    <input type="text" id="edad" name="edad" placeholder="Ej: 25">
+                    <span class="error-msg" id="error-edad"></span>
 
                     <label for="fecha">Fecha preferida de contacto:</label>
                     <input type="date" id="fecha" name="fecha">
 
                     <label for="motivo">Motivo de contacto:</label>
-                    <select id="motivo" name="motivo" required>
+                    <select id="motivo" name="motivo">
                         <option value="">Selecciona una opción</option>
                         <option value="informacion">Solicitar información</option>
                         <option value="inscripcion">Inscripción a clases</option>
@@ -96,15 +103,18 @@
                     <h3>Tu Mensaje</h3>
 
                     <label for="mensaje">Cuéntanos tu consulta:</label>
-                    <textarea id="mensaje" name="mensaje" rows="9" required placeholder="Escribe tu mensaje..."></textarea>
+                    <textarea id="mensaje" name="mensaje" rows="9" placeholder="Escribe tu mensaje..."></textarea>
+                    <span class="error-msg" id="error-mensaje"></span>
+                    <span id="contador-mensaje">0/500 caracteres</span>
 
                     <div class="grupo-form">
                         <p>¿Eres miembro del gimnasio?</p>
 
                         <div class="radio-group">
-                            <label><input type="radio" name="miembro" value="si" required> Sí</label>
+                            <label><input type="radio" name="miembro" value="si"> Sí</label>
                             <label><input type="radio" name="miembro" value="no"> No</label>
                         </div>
+                        <span class="error-msg" id="error-miembro"></span>
 
                         <label for="satisfaccion">Nivel de satisfacción (0–10):</label>
                         <input type="range" id="satisfaccion" name="satisfaccion" min="0" max="10">
@@ -112,7 +122,7 @@
 
                     <div class="check-group">
                         <label class="check">
-                            <input type="checkbox" id="politica" required>
+                            <input type="checkbox" id="politica">
                             Acepto la política de privacidad
                         </label>
                     </div>
