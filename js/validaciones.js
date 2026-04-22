@@ -1,6 +1,24 @@
 // validaciones.js — Módulo de validación del formulario de contacto FitLife
 // Autor: Marc Peiró — Fase IV (JavaScript)
 
+/**
+ * Expresiones regulares utilizadas en este módulo:
+ *
+ *  emailRegex  — Formato básico de email: usuario@dominio.extension
+ *                Acepta letras, números y los caracteres especiales habituales antes del @,
+ *                dominio con puntos, y extensión de mínimo 2 letras.
+ *
+ *  edadRegex   — Número entero entre 18 y 100:
+ *                1[89]  → 18 y 19
+ *                [2-9]\d → 20 a 99 (dígito 2-9 seguido de cualquier dígito)
+ *                100    → exactamente 100
+ *
+ *  nombreRegex — Solo letras (incluyendo acentos y ñ mediante el rango À-ÿ) y espacios,
+ *                con una longitud mínima de 3 caracteres.
+ *
+ *  asuntoRegex — Cualquier texto de entre 3 y 100 caracteres (sin saltos de línea).
+ */
+
 // Regex para correo electrónico: usuario@dominio.extension
 const emailRegex = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
 
