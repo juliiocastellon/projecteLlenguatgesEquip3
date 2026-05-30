@@ -1,6 +1,24 @@
 // validaciones.js — Módulo de validación del formulario de contacto FitLife
 // Autor: Marc Peiró — Fase IV (JavaScript)
 
+/**
+ * Expresiones regulares utilizadas en este módulo:
+ *
+ *  emailRegex  — Formato básico de email: usuario@dominio.extension
+ *                Acepta letras, números y los caracteres especiales habituales antes del @,
+ *                dominio con puntos, y extensión de mínimo 2 letras.
+ *
+ *  edadRegex   — Número entero entre 18 y 100:
+ *                1[89]  → 18 y 19
+ *                [2-9]\d → 20 a 99 (dígito 2-9 seguido de cualquier dígito)
+ *                100    → exactamente 100
+ *
+ *  nombreRegex — Solo letras (incluyendo acentos y ñ mediante el rango À-ÿ) y espacios,
+ *                con una longitud mínima de 3 caracteres.
+ *
+ *  asuntoRegex — Cualquier texto de entre 3 y 100 caracteres (sin saltos de línea).
+ */
+
 // Regex para correo electrónico: usuario@dominio.extension
 const emailRegex = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
 
@@ -13,15 +31,31 @@ const nombreRegex = /^[a-zA-ZÀ-ÿ\s]{3,}$/;
 // Regex para asunto: cualquier texto de entre 3 y 100 caracteres
 const asuntoRegex = /^.{3,100}$/;
 
-// Escribe un mensaje de error en el span identificado por idSpan
+// Relación entre el id del span de error y el id del input correspondiente
+const CAMPO_POR_SPAN = {
+    'error-nombre':  'nombre',
+    'error-email':   'email',
+    'error-edad':    'edad',
+    'error-asunto':  'asunto',
+    'error-mensaje': 'mensaje'
+};
+
+// Escribe un mensaje de error y marca el input con la clase visual de error
 function mostrarError(idSpan, mensaje) {
     const span = document.getElementById(idSpan);
     if (span) span.textContent = mensaje;
+
+    const idCampo = CAMPO_POR_SPAN[idSpan];
+    if (idCampo) {
+        const campo = document.getElementById(idCampo);
+        if (campo) campo.classList.add('input-invalido');
+    }
 }
 
-// Borra todos los mensajes de error del formulario
+// Borra todos los mensajes de error y quita la marca visual de los inputs
 function limpiarErrores() {
     document.querySelectorAll('.error-msg').forEach(function (s) { s.textContent = ''; });
+    document.querySelectorAll('.input-invalido').forEach(function (i) { i.classList.remove('input-invalido'); });
 }
 
 /**
