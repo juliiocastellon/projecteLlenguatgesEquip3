@@ -56,10 +56,38 @@ function mostrarMensajes() {
     }
 }
 
+// Alta de un nuevo mensaje a través del formulario de contacto.
+// Solo se crea el objeto si el formulario pasa la validación (validaciones.js)
+function altaMensaje(evento) {
+    evento.preventDefault(); // evita que el formulario se envíe y recargue la página
+
+    if (validarFormulario()) {
+        let nombre  = document.getElementById("nombre").value.trim();
+        let email   = document.getElementById("email").value.trim();
+        let edad    = document.getElementById("edad").value.trim();
+        let asunto  = document.getElementById("asunto").value.trim();
+        let mensaje = document.getElementById("mensaje").value.trim();
+        let miembro = document.querySelector('input[name="miembro"]:checked').value;
+
+        // Se crea el objeto Missatge y se guarda en el array de mensajes
+        let nuevo = new Missatge(nombre, email, edad, asunto, mensaje, miembro);
+        mensajes.push(nuevo);
+        console.log("Nuevo mensaje añadido: " + nuevo.resumen());
+
+        // Se vuelven a mostrar todos los mensajes y se limpia el formulario
+        mostrarMensajes();
+        document.getElementById("contact-form").reset();
+    }
+}
+
 // Función inicial: se ejecuta al cargar la página
 function inicio() {
     convertirMensajes();
     mostrarMensajes();
+
+    // Al enviar el formulario se intenta dar de alta un nuevo mensaje
+    let formulario = document.getElementById("contact-form");
+    formulario.addEventListener("submit", altaMensaje);
 }
 
 window.onload = inicio;
