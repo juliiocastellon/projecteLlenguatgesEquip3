@@ -42,6 +42,15 @@ function crearTarjeta(objeto) {
     texto.textContent = objeto.mensaje;
     tarjeta.appendChild(texto);
 
+    // Botón para eliminar el mensaje del array (deja de mostrarse)
+    let botonEliminar = document.createElement("button");
+    botonEliminar.textContent = "Eliminar";
+    botonEliminar.classList.add("btn-eliminar");
+    botonEliminar.addEventListener("click", function () {
+        eliminarMensaje(objeto);
+    });
+    tarjeta.appendChild(botonEliminar);
+
     return tarjeta;
 }
 
@@ -78,6 +87,16 @@ function altaMensaje(evento) {
         mostrarMensajes();
         document.getElementById("contact-form").reset();
     }
+}
+
+// Elimina un mensaje del array y actualiza la pantalla
+function eliminarMensaje(objeto) {
+    let posicion = mensajes.indexOf(objeto);
+    if (posicion !== -1) {
+        mensajes.splice(posicion, 1);
+        console.log("Mensaje eliminado: " + objeto.resumen());
+    }
+    mostrarMensajes();
 }
 
 // Función inicial: se ejecuta al cargar la página
