@@ -398,3 +398,61 @@ input[type="radio"]:invalid {
   letter-spacing: 1px;
   font-weight: 900;
 }
+/* ======================================================
+   MENSAJES DE USUARIOS (Objetos - Fase IV)
+   ====================================================== */
+#mensajes-usuarios {
+  margin-top: 40px;
+}
+
+#mensajes-usuarios h2 {
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+  color: var(--accent);
+  text-shadow: 0 0 18px var(--accent);
+  letter-spacing: 1px;
+  font-weight: 900;
+  text-align: center;
+}
+
+/* Tarjeta de cada mensaje */
+.tarjeta-mensaje {
+  background: var(--dark-2);
+  border-left: 4px solid var(--accent);
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin: 0 auto 15px auto;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0, 255, 144, 0.15);
+}
+
+.tarjeta-mensaje h3 {
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+/* Línea con los datos del usuario */
+.datos-mensaje {
+  color: var(--text-soft);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+/* Botón de eliminar mensaje */
+.btn-eliminar {
+  background: transparent;
+  color: #ff5470;
+  border: 1px solid #ff5470;
+  border-radius: 8px;
+  padding: 6px 14px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-eliminar:hover {
+  background: #ff5470;
+  color: var(--dark-1);
+  box-shadow: 0 0 12px #ff5470;
+}
