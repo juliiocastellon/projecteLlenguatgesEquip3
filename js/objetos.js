@@ -24,9 +24,42 @@ function convertirMensajes() {
     }
 }
 
+// Crea la tarjeta (div) que representa un mensaje en pantalla
+function crearTarjeta(objeto) {
+    let tarjeta = document.createElement("div");
+    tarjeta.classList.add("tarjeta-mensaje");
+
+    let titulo = document.createElement("h3");
+    titulo.textContent = objeto.asunto;
+    tarjeta.appendChild(titulo);
+
+    let datos = document.createElement("p");
+    datos.classList.add("datos-mensaje");
+    datos.textContent = objeto.nombre + " · " + objeto.email + " · " + objeto.edad + " años · Miembro: " + objeto.miembro;
+    tarjeta.appendChild(datos);
+
+    let texto = document.createElement("p");
+    texto.textContent = objeto.mensaje;
+    tarjeta.appendChild(texto);
+
+    return tarjeta;
+}
+
+// Muestra todos los mensajes del array en el div lista-mensajes
+function mostrarMensajes() {
+    let lista = document.getElementById("lista-mensajes");
+    lista.innerHTML = "";
+
+    for (let i = 0; i < mensajes.length; i++) {
+        let tarjeta = crearTarjeta(mensajes[i]);
+        lista.appendChild(tarjeta);
+    }
+}
+
 // Función inicial: se ejecuta al cargar la página
 function inicio() {
     convertirMensajes();
+    mostrarMensajes();
 }
 
 window.onload = inicio;
