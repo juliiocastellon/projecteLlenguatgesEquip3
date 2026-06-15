@@ -2,11 +2,11 @@
 
 // Array de diapositives: cada element té una imatge i un text relacionat amb el projecte
 let diapositives = [
-    { imatge: "../img/banner1.jpg", text: "Benvinguts al nostre projecte LMSGI" },
-    { imatge: "../img/banner2.jpg", text: "Formulari de contacte amb validació" },
-    { imatge: "../img/banner3.jpg", text: "Gestió d'objectes i missatges" },
-    { imatge: "../img/banner4.jpg", text: "Interfície dinàmica i responsive" },
-    { imatge: "../img/banner5.jpg", text: "Desenvolupat per 1r DAM - IES Lluís Simarro" }
+    { imatge: "./img/bienvenida1.jpg", text: "Benvinguts a FitLife Gym" },
+    { imatge: "./img/bienvenida2.jpg", text: "Entrenament personal de qualitat" },
+    { imatge: "./img/boxeo.jpeg",      text: "Classes de Boxeo per a tots els nivells" },
+    { imatge: "./img/zumba.jpg",       text: "Zumba: mou-te i diverteix-te" },
+    { imatge: "./img/salud.jpeg",      text: "La teua salut és la nostra prioritat" }
 ];
 
 // Índex de la diapositiva actual
@@ -83,4 +83,4 @@ function diapositivaAnterior() {
     mostrarDiapositiva();
 }
 
-window.onload = inicio;
+window.addEventListener("load", inicio);

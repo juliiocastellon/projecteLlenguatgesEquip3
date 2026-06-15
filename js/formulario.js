@@ -9,8 +9,6 @@ function iniciarFormulari() {
 
     if (!formulari) return;
 
-    formulari.addEventListener("submit", altaMensaje);
-
     formulari.addEventListener("reset", function () {
         limpiarErrores();
         actualitzarComptador(0);
@@ -27,7 +25,7 @@ function iniciarFormulari() {
 
 function actualitzarComptador(actual) {
     let maxCaracters = 500;
-    let comptador = document.getElementById("comptador-missatge");
+    let comptador = document.getElementById("contador-mensaje");
 
     if (comptador) {
         comptador.textContent = actual + " / " + maxCaracters + " caràcters";
@@ -42,4 +40,4 @@ function actualitzarComptador(actual) {
     }
 }
 
-window.onload = inicio;
+window.addEventListener("load", inicio);

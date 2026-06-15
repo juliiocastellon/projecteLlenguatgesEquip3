@@ -14,6 +14,10 @@
   <link rel="stylesheet" href="../css/baile.css">
 
   <title>Zumba — FitLife</title>
+  <script src="../js/reloj.js"></script>
+  <script src="../js/alert.js"></script>
+  <script src="../js/tooltip.js"></script>
+  <script src="../js/teclado.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -26,11 +30,11 @@
     <!-- NAV: barra principal con distinción hover y .active -->
     <nav id="main-nav" role="navigation" aria-label="Menú principal">
       <ul>
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="./Anuarbotseo.html">Boxeo</a></li>
-        <li><a class="active" href="zumba.html" aria-current="page">Zumba</a></li>
-        <li><a href="dietas.html">Nuestros Servicios</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
+        <li data-tooltip="Pàgina principal del gimnàs"><a href="../index.html">Inicio</a></li>
+        <li data-tooltip="Classes de Boxeo per a tots els nivells"><a href="./Anuarbotseo.html">Boxeo</a></li>
+        <li data-tooltip="Classes de Zumba amb instructors experts"><a class="active" href="zumba.html" aria-current="page">Zumba</a></li>
+        <li data-tooltip="Plans de dieta i serveis nutricionals"><a href="dietas.html">Nuestros Servicios</a></li>
+        <li data-tooltip="Envia'ns un missatge o consulta"><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
 
@@ -189,6 +193,7 @@
 
     <!-- PIE (segunda barra de navegación simple e información) -->
     <footer id="footer" role="contentinfo">
+      <div id="reloj"></div>
       <p>© 2025 Gimnasio FitLife</p>
 
       <!-- barra de navegación simple en el pie -->
@@ -197,16 +202,4 @@
         <a href="zumba.html">Zumba</a> |
          <a href="dietas.html">Nuestros servicios</a> |
         <a href="Anuarbotseo.html">Boxeo</a> |
-        <a href="contacto.html">Contacto</a>
-      </nav>
-
-      <address>
-        Correo: <a href="mailto:fitlife@gym.com">fitlife@gym.com</a> — Tel: <a href="tel:+34600000000">+34 600 000 000</a>
-      </address>
-    </footer>
-
-    <!-- Botón de contacto fijo (ejemplo de uso de fixed) -->
-    <a href="./contacto.html" class="contact-fixed" aria-label="Inscripción rápida">Inscríbete</a>
-    </div>
-</body>
-</html>
+       

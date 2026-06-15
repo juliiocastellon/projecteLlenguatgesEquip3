@@ -109,4 +109,4 @@ function inicio() {
     formulario.addEventListener("submit", altaMensaje);
 }
 
-window.onload = inicio;
+window.addEventListener("load", inicio);

@@ -13,8 +13,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FitLife – INICIO</title>
     <script src="./js/reloj.js"></script>
-    <script src="./js/alerts.js"></script>
+    <script src="./js/alert.js"></script>
     <script src="./js/tooltip.js"></script>
+    <script src="./js/banner.js"></script>
+    <script src="./js/teclado.js"></script>
 
 </head>
 
@@ -28,15 +30,18 @@
 
     <nav id="main-nav">
         <ul>
-            <li><a class="active" href="index.html">Inicio</a></li>
-            <li><a href="./html/Anuarbotseo.html">Boxeo</a></li>
-            <li><a href="./html/zumba.html">Zumba</a></li>
-            <li><a href="./html/dietas.html">Nuestros Servicios</a></li>
-            <li><a href="./html/contacto.html">Contacto</a></li>
+            <li data-tooltip="Pàgina principal del gimnàs"><a class="active" href="index.html">Inicio</a></li>
+            <li data-tooltip="Classes de Boxeo per a tots els nivells"><a href="./html/Anuarbotseo.html">Boxeo</a></li>
+            <li data-tooltip="Classes de Zumba amb instructors experts"><a href="./html/zumba.html">Zumba</a></li>
+            <li data-tooltip="Plans de dieta i serveis nutricionals"><a href="./html/dietas.html">Nuestros Servicios</a></li>
+            <li data-tooltip="Envia'ns un missatge o consulta"><a href="./html/contacto.html">Contacto</a></li>
         </ul>
     </nav>
     <main id="contenido">
         
+
+    <!-- Banner amb imatges i textos -->
+    <div id="banner"></div>
 
     <!-- =========================
          1. Bienvenida
@@ -117,14 +122,9 @@ Además, nuestras instalaciones están equipadas con maquinaria moderna, zonas e
 </main>
 
 
-        <!-- AQUÍ VA EL CONTENIDO DE CADA PÁGINA -->
-    </main>
     <footer id="footer">
 
     <div id="reloj"></div>
-    <script src="./js/reloj.js"></script>
-    <script src="./js/alerts.js"></script>
-    <script src="./js/tooltip.js"></script>    
 
     <p>© 2025 Gimnasio FitLife</p>
 

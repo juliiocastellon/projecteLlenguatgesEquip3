@@ -41,4 +41,4 @@ function generarColorHex() {
     return color;
 }
 
-window.onload = inicio;
+window.addEventListener("load", inicio);
